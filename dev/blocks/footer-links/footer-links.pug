@@ -1,0 +1,7 @@
+//- Все примеси в этом файле должны начинаться c имени блока (footer-links)
+
+mixin footer-links(items)
+	.footer-links
+		each item, index in items
+			a.footer-links__item(href="#")!= item.link
+

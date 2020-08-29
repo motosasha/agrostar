@@ -1,0 +1,44 @@
+//- Все примеси в этом файле должны начинаться c имени блока (header)
+
+mixin header(title, isSub, sub)
+	.header
+		.grid
+			.grid__row
+				.grid__col
+					.header__inner.header__inner_mobile
+						a.header__menu.js-menu-trigger
+							span.header__menu-icon
+						if isMainPage === true
+							.header__logo
+								svg.svg
+									use(xlink:href='img/svgSprite.svg#logo_as')
+						else
+							a.header__logo(href='/')
+								svg.svg
+									use(xlink:href='img/svgSprite.svg#logo_as')
+						a.header__call(href='tel:88432788654')
+							svg.header__icon.svg
+								use(xlink:href='img/svgSprite.svg#icon__phone')
+					.header__inner
+						if isMainPage === true
+							.header__logo
+								svg.svg
+									use(xlink:href='img/svgSprite.svg#logo_as')
+						else
+							a.header__logo(href='/')
+								svg.svg
+									use(xlink:href='img/svgSprite.svg#logo_as')
+						.header__nav
+							+nav
+						.header__drop
+							+phone-drop
+						a.header__button.button(href='#') Написать нам
+			.grid__row
+				.grid__col
+					.header__block
+						.breadcrumbs
+							a.breadcrumbs__item(href='/') Главная
+						.header__heading!= title
+						if isSub === true
+							.header__subnav
+								+subnav(sub)

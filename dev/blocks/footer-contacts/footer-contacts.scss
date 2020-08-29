@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока footer-contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer-contacts {
+	&__item {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		& + & {
+			margin-top: 24px;
+		}
+	}
+	&__title {
+		color: #bfcbd1;
+		@include footer-subtitle;
+		margin-bottom: 9px;
+		user-select: none;
+	}
+	&__phone {
+		color: #1c1c1a;
+		@include footer-phone;
+		&:hover {
+			color: #295694;
+		}
+	}
+	&__mail {
+		color: #1e3d68;
+		@include footer-mail;
+		margin-top: 4px;
+		&:hover {
+			color: #295694;
+			text-decoration: none;
+		}
+	}
+	&__address {
+		color: #1c1c1a;
+		@include footer-address;
+		user-select: none;
+	}
+}

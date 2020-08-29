@@ -10,6 +10,7 @@ let config = {
 		'normalize.css/normalize.css',
 		'dev/scss/variables.scss',
 		'dev/scss/mixins.scss',
+		'dev/scss/typography.scss',
 		'dev/scss/reboot.scss',
 		'dev/scss/fonts.scss',
 		// 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',

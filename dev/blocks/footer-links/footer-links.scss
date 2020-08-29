@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока footer-links, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer-links {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	&__item {
+		color: #8a969b;
+		@include footer-links;
+		& + & {
+			margin-top: 16px;
+		}
+		&:hover {
+			color: #1a171a;
+		}
+	}
+}

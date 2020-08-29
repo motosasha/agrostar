@@ -1,0 +1,54 @@
+// В этом файле должны быть стили для БЭМ-блока footer-grid, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer-grid {
+	display: grid;
+	grid-gap: 40px;
+	@media (min-width: $screen-sm) {
+		grid-gap: 32px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+				'logo logo'
+				'about catalog'
+				'services contacts';
+	}
+	@media (min-width: $screen-md) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+				'logo logo logo'
+				'about catalog contacts'
+				'about services contacts';
+	}
+	@media (min-width: $screen-lg) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+				'logo about catalog contacts'
+				'logo about services contacts';
+	}
+	@media (min-width: $screen-xl) {
+		grid-gap: 60px;
+		grid-template-columns: 192px 180px 240px 180px 208px;
+		grid-template-areas:
+				'logo about catalog services contacts';
+	}
+	&__item {
+		@media (min-width: $screen-sm) {
+			&:nth-child(1) {
+				grid-area: logo;
+			}
+			&:nth-child(2) {
+				grid-area: about;
+			}
+			&:nth-child(3) {
+				grid-area: catalog;
+			}
+			&:nth-child(4) {
+				grid-area: services;
+			}
+			&:nth-child(5) {
+				grid-area: contacts;
+			}
+		}
+	}
+}

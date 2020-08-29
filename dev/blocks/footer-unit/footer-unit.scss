@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока footer-unit, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer-unit {
+	padding: 0 4px;
+	@media (min-width: $screen-sm) {
+		padding: 0;
+	}
+	&__title {
+		color: #1c1c1a;
+		@include footer-title;
+		margin-bottom: 18px;
+		user-select: none;
+	}
+}

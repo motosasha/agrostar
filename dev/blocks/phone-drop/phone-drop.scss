@@ -1,0 +1,73 @@
+// В этом файле должны быть стили для БЭМ-блока phone-drop, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.phone-drop {
+	border-radius: 8px;
+	margin: -5px 0;
+	padding: 8px 4px 8px 8px;
+	transition: background .25s ease;
+	width: 208px;
+	&_open {
+		background: #fff;
+		position: absolute;
+		top: 0;
+	}
+	&__inner {
+		align-items: center;
+		display: inline-flex;
+		justify-content: space-between;
+		& + & {
+			display: none;
+			margin-top: 8px;
+			padding-left: 34px;
+		}
+	}
+	&_open &__inner {
+		display: inline-flex;
+	}
+	&__img {
+		align-items: center;
+		background: #003569;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		height: 26px;
+		margin-right: 8px;
+		width: 26px;
+	}
+	&__icon {
+		fill: #fff;
+		height: 16px;
+		width: 16px;
+	}
+	&__link {
+		align-items: center;
+		color: #fff;
+		display: flex;
+		font-size: 17px;
+		line-height: 100%;
+		text-decoration: none;
+		transition: color .25s ease;
+	}
+	&_open &__link {
+		color: #295694;
+	}
+	&__trigger {
+		align-items: center;
+		border-radius: 4px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		height: 26px;
+		margin-left: 4px;
+		width: 26px;
+		&:hover {
+			background: rgba(255,255,255,.125);
+		}
+	}
+	&_open &__trigger svg {
+		fill: #295694;
+		transform: rotate(180deg);
+	}
+}

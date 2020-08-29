@@ -1,0 +1,51 @@
+.footer
+	.grid
+		.grid__row
+			.grid__col
+				.footer-grid
+					.footer-grid__item
+						svg.footer__logo.svg
+							use(xlink:href='img/svgSprite.svg#logo_as')
+					.footer-grid__item
+						+footer-unit('О компании')
+							+footer-links(
+								[
+									{link: 'О нас'},
+									{link: 'О сопроводительных услугах'},
+									{link: 'О производстве'},
+									{link: 'О лаборатории'},
+									{link: 'Команда'},
+									{link: 'Вакансии'}
+								]
+							)
+					.footer-grid__item
+						+footer-unit('Каталог')
+							+footer-links(
+								[
+									{link: 'Корма для телят'},
+									{link: 'Корма для коров в транзитный период'},
+									{link: 'Для повышения удоев'}
+								]
+							)
+					.footer-grid__item
+						+footer-unit('Услуги')
+							+footer-links(
+								[
+									{link: 'Аудит хозяйств'},
+									{link: 'Расчёт рациона'},
+									{link: 'Лабораторные иследования'}
+								]
+							)
+					.footer-grid__item
+						+footer-unit('Контакты')
+							.footer-contacts
+								.footer-contacts__item
+									.footer-contacts__title Контакты для связи
+									a(href='tel:88432788654').footer-contacts__phone +7 843 278 86 54
+									a(href='tel:89673683323').footer-contacts__phone +7 967 36 83 323
+									a(href='mailto:servisagro2@gmail.com').footer-contacts__mail servisagro2@gmail.com
+								.footer-contacts__item
+									.footer-contacts__title Наши координаты
+									address.footer-contacts__address.
+										РТ, г. Казань,<br>
+										ул. Поперечно-Отарская, д. 100

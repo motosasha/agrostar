@@ -1,0 +1,56 @@
+// В этом файле должны быть стили для БЭМ-блока sidenav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sidenav {
+	background: #4671a2;
+	height: 100%;
+	padding: 24px;
+	transform: translateX(-240px);
+	transition: transform .25s ease;
+	width: 240px;
+	.nav-open & {
+		transform: translateX(0);
+	}
+	&__scroll {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow: hidden;
+-webkit-overflow-scrolling: touch;
+		overflow-y: auto;
+	}
+	&__inner {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 60%;
+		margin-top: auto;
+		min-height: 360px;
+	}
+	&__phones {
+		display: flex;
+		margin: auto 0 64px;
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+	&__link {
+		color: #fff;
+		@include header-nav;
+		transition: color .25s ease;
+		&:hover {
+			color: rgba(255,255,255,.5);
+		}
+		& + & {
+			margin-top: 8px;
+		}
+	}
+	&__button {
+		box-shadow: none;
+		font-size: 14px;
+		width: 100%;
+	}
+}

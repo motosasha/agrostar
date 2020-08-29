@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока subnav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.subnav {
+	display: flex;
+	flex-wrap: wrap;
+	&__item {
+		color: rgba(255,255,255,.5);
+		@include header-subnav;
+		margin: 0 24px 16px 0;
+		position: relative;
+		transition: color .25s ease;
+		&:hover {
+			color: #f8fafd;
+		}
+		&_active {
+			color: #f8fafd;
+			&::after {
+				@media (min-width: $screen-xl) {
+					background: #003569;
+					content: '';
+					display: block;
+					height: 2px;
+					left: -8px;
+					position: absolute;
+					bottom: 0;
+					width: calc(100% + 16px);
+				}
+			}
+		}
+		@media (min-width: $screen-xl) {
+			margin: 0 26px 0 0;
+			padding: 20px 0;
+		}
+	}
+}

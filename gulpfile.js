@@ -27,7 +27,7 @@ const sass                  = require('gulp-sass');
 const svgstore              = require('gulp-svgstore');
 const svgmin                = require('gulp-svgmin');
 const through2              = require('through2');
-const uglify            	= require('gulp-uglify');
+const uglify            	= require('gulp-uglify-es').default;
 const webpackStream         = require('webpack-stream');
 
 // Глобальные настройки

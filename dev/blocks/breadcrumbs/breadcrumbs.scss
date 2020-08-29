@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока breadcrumbs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.breadcrumbs {
+	display: flex;
+	&__item {
+		background: rgba(12,12,12,.24);
+		border-radius: 20px;
+		color: rgba(255, 255, 255, 0.79);
+		@include breadcrumbs;
+		padding: 5px 16px;
+	}
+}

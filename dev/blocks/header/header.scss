@@ -1,0 +1,143 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header {
+	background: #4671a2;
+	border-radius: 0 0 64px 0;
+	@media (min-width: $screen-md) {
+		border-radius: 0 0 100px 0;
+	}
+	&__inner {
+		display: none;
+		padding: 24px 0;
+		@media (min-width: $screen-md) {
+			align-items: center;
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: 1fr 208px 175px;
+			grid-template-areas:
+					'logo drop button'
+					'nav nav nav';
+			padding: 20px 0;
+		}
+		@media (min-width: $screen-xl) {
+			grid-gap: 60px;
+			grid-template-columns: 161px auto 208px 175px;
+			grid-template-areas:
+					'logo nav drop button';
+		}
+		&_mobile {
+			display: flex;
+			justify-content: space-between;
+			@media (min-width: $screen-md) {
+				display: none;
+			}
+		}
+	}
+	&__block {
+		padding: 16px 0 0;
+		@media (min-width: $screen-md) {
+			padding: 48px 0 0;
+		}
+	}
+	&__logo {
+		grid-area: logo;
+		flex: 0 0 auto;
+		height: 32px;
+		width: 161px;
+		svg {
+			fill: #ffffff;
+			height: 32px;
+			width: 161px;
+		}
+	}
+	&__menu {
+		cursor: pointer;
+		display: flex;
+		height: 32px;
+		text-align: center;
+		text-decoration: none;
+		transition: background .25s ease,
+					transform .25s ease;
+		width: 32px;
+		will-change: transform;
+	}
+	&__menu-icon {
+		background: $typography-inverse;
+		border-radius: 1px;
+		display: block;
+		height: 2px;
+		margin: auto;
+		position: relative;
+		width: 20px;
+		.nav-open & {
+			height: 0;
+			width: 24px;
+		}
+		&::after,
+		&::before {
+			background: $typography-inverse;
+			border-radius: 1px;
+			content: '';
+			display: block;
+			height: 2px;
+			position: absolute;
+			transition: transform .25s ease;
+			width: 20px;
+			will-change: transform;
+		}
+		&::after {
+			transform: translateY(5px) rotate(0);
+			.nav-open & {
+				transform: translateY(-1px) rotate(-225deg);
+				width: 24px;
+			}
+		}
+		&::before {
+			transform: translateY(-5px) rotate(0);
+			.nav-open & {
+				transform: translateY(-1px) rotate(225deg);
+				width: 24px;
+			}
+		}
+	}
+	&__call {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		height: 32px;
+		width: 32px;
+	}
+	&__icon {
+		fill: #fff;
+		height: 24px;
+		width: 24px;
+	}
+	&__heading {
+		color: #f8fafd;
+		@include header-heading;
+		margin: 8px 0 40px;
+	}
+	&__subnav {
+		margin-top: -16px;
+		padding-bottom: 8px;
+		@media (min-width: $screen-xl) {
+			padding: 0;
+		}
+	}
+	&__nav {
+		grid-area: nav;
+	}
+	&__drop {
+		grid-area: drop;
+		height: 32px;
+		position: relative;
+	}
+	&__button {
+		box-shadow: none;
+		font-size: 16px;
+		grid-area: button;
+	}
+}

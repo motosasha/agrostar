@@ -1,0 +1,56 @@
+@mixin header-heading {
+	font-family: $font-family-heading;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 115%;
+	@media (min-width: $screen-sm) {
+		font-size: 67px;
+	}
+}
+@mixin header-nav {
+	font-size: 16px;
+	line-height: 120%;
+	text-decoration: none;
+}
+@mixin header-subnav {
+	font-size: 17px;
+	line-height: 118%;
+	text-decoration: none;
+}
+
+@mixin breadcrumbs {
+	font-size: 14px;
+	line-height: 115%;
+	text-align: center;
+	text-decoration: none;
+}
+
+@mixin footer-title {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 120%;
+}
+@mixin footer-subtitle {
+	font-size: 13px;
+	line-height: 115%;
+}
+@mixin footer-links {
+	font-size: 13px;
+	line-height: 125%;
+	text-decoration: none;
+}
+@mixin footer-phone {
+	font-size: 16px;
+	line-height: 118%;
+	text-decoration: none;
+}
+@mixin footer-mail {
+	font-size: 13px;
+	line-height: 115%;
+	text-decoration-line: underline;
+}
+@mixin footer-address {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 136%;
+}

@@ -1,0 +1,18 @@
+extends ../pug/layout_default.pug
+
+block variables
+
+block pageHeader
+	+header(
+		'Продукция',
+		true,
+		[
+			{active: true, link: 'Вся продукция', url: '#'},
+			{active: false, link: 'Корма для выращивания телят', url: '#'},
+			{active: false, link: 'Корма для здоровья коров', url: '#'},
+			{active: false, link: 'Корма для повышения удоев', url: '#'},
+			{active: false, link: 'Премиксы', url: '#'}
+		]
+	)
+
+block pageMain

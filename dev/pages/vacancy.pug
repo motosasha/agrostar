@@ -1,0 +1,18 @@
+extends ../pug/layout_default.pug
+
+block variables
+
+block pageHeader
+	+header(
+		'Вакансия',
+		true,
+		[
+			{active: false, link: 'О нас', url: 'about.html'},
+			{active: false, link: 'О сопроводительных услугах', url: '#'},
+			{active: false, link: 'О производстве', url: '#'},
+			{active: false, link: 'О лаборатории', url: '#'},
+			{active: true, link: 'Вакансии', url: '#'}
+		]
+	)
+
+block pageMain

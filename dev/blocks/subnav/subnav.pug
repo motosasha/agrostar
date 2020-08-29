@@ -1,0 +1,9 @@
+//- Все примеси в этом файле должны начинаться c имени блока (subnav)
+
+mixin subnav(items)
+	.subnav
+		each item, index in items
+			if item.active === true
+				a.subnav__item(class=item.active ? 'subnav__item_active': '', href= item.url)!= item.link
+			else
+				a.subnav__item(href= item.url)!= item.link
