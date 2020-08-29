@@ -1,0 +1,40 @@
+//- Все примеси в этом файле должны начинаться c имени блока (field)
+
+mixin field(label, placeholder, value, info, mod)
+	.field(class= mod)
+		label.field__inner
+			.field__label!= label
+			input.field__input.input(required, placeholder= placeholder, value= value)
+		.field__info!= info
+
+mixin field_phone(label, placeholder, value, info, mod)
+	.field(class= mod)
+		label.field__inner
+			.field__label!= label
+			input.field__input.input(required, type='tel', id='phone-mask', placeholder= placeholder, pattern='\\+7[\\(]{0,1}9[0-9]{2}[\\)]{0,1}\\d{3}[-]{0,1}\\d{2}[-]{0,1}\\d{2}', value= value)
+		.field__info!= info
+
+mixin field_mail(label, placeholder, value, info, mod)
+	.field(class= mod)
+		label.field__inner
+			.field__label!= label
+			input.field__input.input(required, type='email', id='mail-mask', placeholder= placeholder, pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', value= value)
+		.field__info!= info
+
+mixin field_select(label, mod)
+	.field(class= mod)
+		label.field__inner
+			.field__label!= label
+			select.select(required)
+				option(value="0") Выберите время
+				option(value="1") с 09:00 — 11:00
+				option(value="2") с 11:00 — 13:00
+				option(value="3") с 13:00 — 15:00
+				option(value="4") с 15:00 — 17:00
+
+mixin field_textarea(label, placeholder, info, mod)
+	.field(class= mod)
+		label.field__inner
+			.field__label!= label
+			textarea.field__textarea.textarea(placeholder= placeholder)= value
+		.field__info!= info

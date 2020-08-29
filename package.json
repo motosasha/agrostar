@@ -43,6 +43,7 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify-es": "^2.0.0",
+    "jquery.maskedinput": "^1.4.1",
     "mkdirp": "^0.5.1",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",

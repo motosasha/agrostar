@@ -1,3 +1,16 @@
+@mixin field {
+	font-size: 17px;
+	line-height: 118%;
+}
+@mixin field-label {
+	font-size: 16px;
+	line-height: 120%;
+}
+@mixin filed-info {
+	font-size: 14px;
+	line-height: 100%;
+}
+
 @mixin header-heading {
 	font-family: $font-family-heading;
 	font-size: 40px;
@@ -53,4 +66,64 @@
 	font-size: 14px;
 	font-style: normal;
 	line-height: 136%;
+}
+
+@mixin popup-title {
+	font-size: 20px;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 36px;
+		text-align: center;
+	}
+}
+@mixin popup-descr {
+	font-size: 12px;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 16px;
+		text-align: center;
+	}
+}
+@mixin popup-product-title {
+	font-family: $font-family-heading;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-size: 20px;
+	line-height: 100%;
+	@media (min-width: $screen-sm) {
+		font-size: 24px;
+	}
+}
+@mixin popup-product-descr {
+	font-size: 12px;
+	line-height: 145%;
+	@media (min-width: $screen-sm) {
+		font-size: 16px;
+	}
+}
+
+@mixin drag-drop-placeholder {
+	font-size: 10px;
+	line-height: 120%;
+	text-align: center;
+}
+@mixin drag-drop-progress {
+	font-size: 14px;
+	line-height: 115%;
+	text-align: center;
+}
+@mixin drag-drop-filename {
+	font-size: 12px;
+	line-height: 100%;
+}
+@mixin drag-drop-filesize {
+	font-size: 10px;
+	line-height: 100%;
+}
+
+@mixin checkbox-label {
+	font-size: 13px;
+	line-height: 120%;
+	@media (min-width: $screen-lg) {
+		line-height: 150%;
+	}
 }

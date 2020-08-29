@@ -1,0 +1,132 @@
+// В этом файле должны быть стили для БЭМ-блока popup, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.popup {
+	background: #f1f2f4;
+	border-radius: 20px;
+	margin: 0 auto;
+	max-width: 870px;
+	overflow: hidden;
+	padding: 24px 16px 24px;
+	position: relative;
+	width: calc(100% - 32px);
+	@media (min-width: $screen-sm) {
+		padding: 48px 40px 56px;
+	}
+	@media (min-width: $screen-md) {
+		padding: 67px 97px 72px;
+	}
+	&__inner {}
+	&__close {
+		align-items: center;
+		background: #1e3d68;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		height: 32px;
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		transition: background .25s ease;
+		width: 32px;
+		&:hover {
+			background: #112743;
+		}
+		@media (min-width: $screen-sm) {
+			height: 52px;
+			right: 28px;
+			top: 28px;
+			width: 52px;
+		}
+	}
+	&__icon {
+		height: 12px;
+		width: 12px;
+		@media (min-width: $screen-sm) {
+			height: 16px;
+			width: 16px;
+		}
+	}
+	&__title {
+		color: #000;
+		@include popup-title;
+	}
+	&__descr {
+		color: rgba(0, 0, 0, 0.5);
+		@include popup-descr;
+		margin: 12px 0 22px;
+	}
+	&__form {
+		display: grid;
+		grid-gap: 24px;
+		margin-top: 32px;
+		@media (min-width: $screen-lg) {
+			grid-gap: 32px;
+			margin-top: 52px;
+		}
+	}
+
+	&__product {
+		display: flex;
+		flex-direction: column;
+		padding: 25px 0;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			align-items: center;
+			flex-direction: row;
+		}
+		&::before {
+			background: #edeef0;
+			content: '';
+			display: block;
+			height: 100%;
+			left: -25%;
+			top: 0;
+			position: absolute;
+			width: 150%;
+		}
+	}
+	&__product-image {
+		align-items: center;
+		background: #fff;
+		border-radius: 20px;
+		display: flex;
+		flex: 0 0 auto;
+		justify-content: center;
+		height: 152px;
+		position: relative;
+		z-index: 2;
+		@media (min-width: $screen-sm) {
+			width: 169px;
+		}
+		img {
+			max-height: 75%;
+			max-width: 75%;
+		}
+	}
+	&__product-inner {
+		position: relative;
+		z-index: 2;
+	}
+	&__product-image + &__product-inner {
+		margin-top: 24px;
+		@media (min-width: $screen-sm) {
+			margin-left: 24px;
+			margin-top: 0;
+		}
+	}
+	&__product-title {
+		color: #1A171A;
+		@include popup-product-title;
+		margin-bottom: 8px;
+		@media (min-width: $screen-sm) {
+			margin-bottom: 11px;
+		}
+	}
+	&__product-descr {
+		color: rgba(26, 23, 26, 0.7);
+		@include popup-product-descr;
+	}
+}

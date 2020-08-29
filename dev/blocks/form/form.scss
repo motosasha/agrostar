@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form {
+	&__inner {}
+	&__grid {
+		display: grid;
+		grid-gap: 32px;
+		grid-template-columns: 1fr;
+		@media (min-width: $screen-md) {
+			grid-gap: 32px;
+			grid-template-areas:
+					'name phone'
+					'mail .'
+					'comment comment';
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media (min-width: $screen-md) {
+		&__field:nth-child(1) {
+			grid-area: name;
+		}
+		&__field:nth-child(2) {
+			grid-area: phone;
+		}
+		&__field:nth-child(3) {
+			grid-area: mail;
+		}
+		&__field:nth-child(4) {
+			grid-area: time;
+		}
+		&__field:last-child {
+			grid-area: comment;
+		}
+	}
+	&__button {
+		@media (min-width: $screen-md) {
+			padding: 19px 16px;
+			width: 233px;
+		}
+	}
+}

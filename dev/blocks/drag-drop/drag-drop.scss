@@ -1,0 +1,158 @@
+// В этом файле должны быть стили для БЭМ-блока drag-drop, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+@for $i from 0 through 100 {
+	.drag-drop__loading .drag-drop__progress[value="#{$i}"] {
+		& ~ .drag-drop__percent::before { content : '#{$i} %' }
+		& ~ .drag-drop__progress-bg .drag-drop__progress-bar { width: $i * 1% }
+	}
+}
+
+.drag-drop {
+	display: grid;
+	grid-gap: 16px;
+	&__area {
+		border: 1px dashed #aab0c6;
+		border-radius: 8px;
+		color: rgba(124,131,156,.6);
+		cursor: pointer;
+		@include drag-drop-placeholder;
+		padding: 16px;
+		transition: all .125s ease;
+		&:hover {
+			border: 1px dashed #7c839c;
+			color: #7c839c;
+		}
+	}
+	&__file {
+		display: none;
+	}
+	&__loading {
+		position: relative;
+		overflow: hidden;
+	}
+	&__progress {
+		height: 0;
+		left: -1000px;
+		overflow: hidden;
+		position: absolute;
+		width: 0;
+	}
+	&__percent {
+		color: #7c839c;
+		display: block;
+		@include drag-drop-progress;
+		margin-top: 5px;
+	}
+	&__progress-bg {
+		background: #d9e6ed;
+		border-radius: 4px;
+		height: 8px;
+		overflow: hidden;
+		position: relative;
+	}
+	&__progress-bar {
+		background: #003569;
+		border-radius: 4px;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		transition: width 1s linear;
+		width: 0;
+		&::after {
+			animation: progress_bar 0.8s linear infinite;
+			background-image: linear-gradient(45deg,rgba(#dce9ef,1) 25%,transparent 25%,transparent 50%,rgba(#dce9ef,1) 50%,rgba(#dce9ef,1) 75%,transparent 75%,transparent);
+			background-size: 36px 36px;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+	&__loaded {
+		background: rgba(217,230,237,.47);
+		border-radius: 8px;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4px 12px;
+		width: 100%;
+	}
+	&__item {
+		align-items: center;
+		background: #fff;
+		border-radius: 9px;
+		display: flex;
+		margin: 8px 8px 8px 0;
+		padding: 12px 24px 12px 12px;
+		position: relative;
+		width: 100%;
+		@media (min-width: $screen-sm) {
+			margin: 8px 32px 8px 0;
+			width: 200px;
+		}
+		@media (min-width: $screen-lg) {
+			margin: 8px 32px 8px 0;
+			width: 162px;
+		}
+	}
+	&__icon {
+		height: 24px;
+		margin-right: 8px;
+		width: 24px;
+	}
+	&__item-inner {
+		width: calc(100% - 32px);
+	}
+	&__filename {
+		color: #444;
+		@include drag-drop-filename;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
+		user-select: none;
+	}
+	&__filesize {
+		color: #7C839C;
+		@include drag-drop-filesize;
+		user-select: none;
+	}
+	&__remove {
+		align-items: center;
+		background: #af5267;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		height: 20px;
+		position: absolute;
+		transition: background .25s ease;
+		right: -10px;
+		width: 20px;
+		&:hover {
+			background: #993f54;
+		}
+	}
+	&__cross {
+		height: 8px;
+		width: 8px;
+	}
+}
+
+@-webkit-keyframes progress_bar {
+	0% {background-position: -36px 0;}
+	100% {background-position: 0 0;}
+}
+@-moz-keyframes progress_bar {
+	0% {background-position: -36px 0;}
+	100% {background-position: 0 0;}
+}
+@keyframes progress_bar {
+	0% {background-position: -36px 0;}
+	100% {background-position: 0 0;}
+}

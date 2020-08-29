@@ -1,0 +1,39 @@
+//- Служебный шаблон страницы
+block variables
+
+include mixins.pug
+
+doctype html
+html(class='no-js', lang='ru-RU')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=3, minimum-scale=0.1')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		meta(name='theme-color', content='#4671a2')
+
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet")
+
+		block meta
+			title pageTitle
+			meta(name='description', content='')
+			meta(name='keywords', content='')
+
+		block head
+			link(rel="stylesheet" href="/css/style.css")
+			// удалить:
+			link(rel="stylesheet" href="/css/trash.css")
+
+	body
+		noscript У вас отключен JavaScript. Это пугает.
+
+		include layout__part_navigation.pug
+		.page
+			.page__main
+				block pageMain
+					.fake-content fake-content
+	script(src='/js/main.js')
+	block scripts
+
+	//удалить
+	script(src="/js/service.js")
