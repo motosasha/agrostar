@@ -16,27 +16,28 @@ block pageMain
 								use(xlink:href='img/svgSprite.svg#icon__cross')
 						.popup__title Отправить резюме
 						.popup__descr Если вам понравилась наша вакансия, вы подходите под эти критерии или у вас есть желание попробовать силы, откликнитесь на неё
-						form.form.popup__form
+						form.form.popup__form(id='upload')
 							.form__grid
 								+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
 								+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
 								+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
 								+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
 							.drag-drop
-								label.drag-drop__area Загрузить резюме doc, docx, <br>pdf, jpg, zip размером до 10 Мб
+								label.drag-drop__area(id='drag-drop') Загрузить резюме doc, docx, <br>pdf, jpg, zip размером до 10 Мб
 									input.drag-drop__file(type='file' multiple)
-								.drag-drop__loading
+								.drag-drop__loading(style='display:none;')
 									progress.drag-drop__progress(value='45' max='100')
 									.drag-drop__progress-bg
 										.drag-drop__progress-bar
 									.drag-drop__percent
-								.drag-drop__loaded
-									+drag-drop-file('Резюме.pdf', '456 Кб', 'pdf')
-									+drag-drop-file('Резюме.jpg', '456 Кб', 'jpg')
-									+drag-drop-file('Резюме.zip', '456 Кб', 'zip')
-									+drag-drop-file('Резюме.doc', '456 Кб', 'doc')
-									+drag-drop-file('Резюме.docx', '456 Кб', 'doc')
+								.drag-drop__loaded(style='display:none;')
+									//+drag-drop-file('Резюме.pdf', '456 Кб', 'pdf')
+									//+drag-drop-file('Резюме.jpg', '456 Кб', 'jpg')
+									//+drag-drop-file('Резюме.zip', '456 Кб', 'zip')
+									//+drag-drop-file('Резюме.doc', '456 Кб', 'doc')
+									//+drag-drop-file('Резюме.docx', '456 Кб', 'doc')
 							+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+							div.error(style='display:none;') Ошибка
 							button.form__button.button Отправить
 		.grid__row
 			.grid__col
@@ -79,4 +80,8 @@ block pageMain
 								+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
 							+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
 							button.form__button.button Оформить товар
+
+block scripts
+	template(id='drag-drop-file-tpl')
+		+drag-drop-file('__fileName__', '__size__', '__ext__')
 
