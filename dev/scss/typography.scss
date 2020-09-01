@@ -119,6 +119,10 @@
 	font-size: 10px;
 	line-height: 100%;
 }
+@mixin drag-drop-error {
+	font-size: 12px;
+	line-height: 100%;
+}
 
 @mixin checkbox-label {
 	font-size: 13px;

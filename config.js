@@ -10,6 +10,7 @@ let config = {
 		'normalize.css/normalize.css',
 		'dev/scss/variables.scss',
 		'dev/scss/mixins.scss',
+		'dev/scss/vendor.scss',
 		'dev/scss/typography.scss',
 		'dev/scss/reboot.scss',
 		'dev/scss/fonts.scss',

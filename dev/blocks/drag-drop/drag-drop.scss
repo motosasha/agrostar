@@ -20,6 +20,7 @@
 		@include drag-drop-placeholder;
 		padding: 16px;
 		transition: all .125s ease;
+		&_hover,
 		&:hover {
 			border: 1px dashed #7c839c;
 			color: #7c839c;
@@ -29,6 +30,7 @@
 		display: none;
 	}
 	&__loading {
+		display: none;
 		position: relative;
 		overflow: hidden;
 	}
@@ -77,7 +79,7 @@
 	&__loaded {
 		background: rgba(217,230,237,.47);
 		border-radius: 8px;
-		display: flex;
+		display: none;
 		flex-wrap: wrap;
 		padding: 4px 12px;
 		width: 100%;
@@ -141,6 +143,12 @@
 	&__cross {
 		height: 8px;
 		width: 8px;
+	}
+	&__error {
+		color: $typography-error;
+		display: none;
+		@include drag-drop-error;
+		text-align: center;
 	}
 }
 

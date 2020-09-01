@@ -16,3 +16,9 @@ block pageHeader
 	)
 
 block pageMain
+	a.js-popup(href='#popup-vacancy') Отправить резюме
+
+block templates
+	+popup-vacancy
+	template(id='drag-drop-file-tpl')
+		+drag-drop-file('__fileName__', '__size__', '__ext__')

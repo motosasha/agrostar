@@ -23,12 +23,15 @@ function UploadFile(form, afterUpload) {
 		};
 		if (obj.dropzone.js) {
 			obj.dropzone.js.ondragover = function () {
+				obj.dropzone.jquery.addClass('drag-drop__area_hover');
 				return false;
 			};
 			obj.dropzone.js.ondragleave = function () {
+				obj.dropzone.jquery.removeClass('drag-drop__area_hover');
 				return false;
 			};
 			obj.dropzone.js.ondrop = function (event) {
+				obj.dropzone.jquery.removeClass('drag-drop__area_hover');
 				event.preventDefault();
 				obj.upload( event.dataTransfer.files);
 			};
@@ -62,7 +65,7 @@ function UploadFile(form, afterUpload) {
 	if (isProd) {
 		this.upload = function (files) {
 			var $form = $('#' + obj.form),
-				$error = $form.find('.error'),
+				$error = $form.find('.drag-drop__error'),
 				$progressBar = $form.find('.drag-drop__loading'),
 				$progress = $form.find('.drag-drop__progress');
 			$error.hide();
@@ -112,7 +115,7 @@ function UploadFile(form, afterUpload) {
 		// Т
 		this.upload = function (files) {
 			var $form = $('#' + obj.form),
-				$error = $form.find('.error'),
+				$error = $form.find('.drag-drop__error'),
 				$progressBar = $form.find('.drag-drop__loading'),
 				$progress = $form.find('.drag-drop__progress');
 			$error.hide();

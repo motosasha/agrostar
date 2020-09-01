@@ -1,0 +1,72 @@
+//- Все примеси в этом файле должны начинаться c имени блока (popup)
+
+mixin popup-vacancy()
+	#popup-vacancy.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='img/svgSprite.svg#icon__cross')
+			.popup__title Отправить резюме
+			.popup__descr Если вам понравилась наша вакансия, вы подходите под эти критерии или у вас есть желание попробовать силы, откликнитесь на неё
+			form.form.popup__form(id='upload')
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				.drag-drop
+					label.drag-drop__area(id='drag-drop') Загрузить резюме doc, docx, <br>pdf, jpg, zip размером до 10 Мб
+						input.drag-drop__file(type='file' multiple)
+					.drag-drop__loading
+						progress.drag-drop__progress(max='100')
+						.drag-drop__progress-bg
+							.drag-drop__progress-bar
+						.drag-drop__percent
+					.drag-drop__loaded
+					.drag-drop__error
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Отправить
+
+mixin popup-call()
+	#popup-call.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='img/svgSprite.svg#icon__cross')
+			.popup__title Заказать звонок
+			.popup__descr Вы можете заказать звонок на Ваш телефон через данную форму. Укажите в соответствующих полях Ваши контактные данные и наш сотрудник перезвонит Вам.
+			form.form.popup__form
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_select('Время для звонка', '')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Отправить
+
+mixin popup-price()
+	#popup-price.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='img/svgSprite.svg#icon__cross')
+			.popup__title Узнать цену
+			.popup__descr Вы можете заказать звонок на Ваш телефон через данную форму. Укажите в соответствующих полях Ваши контактные данные и наш сотрудник перезвонит Вам.
+			.popup__product
+				.popup__product-image
+					img(src='/assets/popup-good.png' alt='')
+				.popup__product-inner
+					.popup__product-title БМВЛ для телят АСТ/105
+					.popup__product-descr витаминно-минеральный коктейль для добавления в цельное молоко
+			form.form.popup__form
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Оформить товар

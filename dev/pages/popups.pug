@@ -9,79 +9,20 @@ block pageMain
 	.grid
 		.grid__row
 			.grid__col
-				.popup
-					.popup__inner
-						.popup__close
-							svg.popup__icon.svg
-								use(xlink:href='img/svgSprite.svg#icon__cross')
-						.popup__title Отправить резюме
-						.popup__descr Если вам понравилась наша вакансия, вы подходите под эти критерии или у вас есть желание попробовать силы, откликнитесь на неё
-						form.form.popup__form(id='upload')
-							.form__grid
-								+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
-								+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
-								+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
-								+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
-							.drag-drop
-								label.drag-drop__area(id='drag-drop') Загрузить резюме doc, docx, <br>pdf, jpg, zip размером до 10 Мб
-									input.drag-drop__file(type='file' multiple)
-								.drag-drop__loading(style='display:none;')
-									progress.drag-drop__progress(value='45' max='100')
-									.drag-drop__progress-bg
-										.drag-drop__progress-bar
-									.drag-drop__percent
-								.drag-drop__loaded(style='display:none;')
-									//+drag-drop-file('Резюме.pdf', '456 Кб', 'pdf')
-									//+drag-drop-file('Резюме.jpg', '456 Кб', 'jpg')
-									//+drag-drop-file('Резюме.zip', '456 Кб', 'zip')
-									//+drag-drop-file('Резюме.doc', '456 Кб', 'doc')
-									//+drag-drop-file('Резюме.docx', '456 Кб', 'doc')
-							+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
-							div.error(style='display:none;') Ошибка
-							button.form__button.button Отправить
-		.grid__row
-			.grid__col
-				.popup
-					.popup__inner
-						.popup__close
-							svg.popup__icon.svg
-								use(xlink:href='img/svgSprite.svg#icon__cross')
-						.popup__title Заказать звонок
-						.popup__descr Вы можете заказать звонок на Ваш телефон через данную форму. Укажите в соответствующих полях Ваши контактные данные и наш сотрудник перезвонит Вам.
-						form.form.popup__form
-							.form__grid
-								+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
-								+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
-								+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
-								+field_select('Время для звонка', '')
-								+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
-							+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
-							button.form__button.button Отправить
-		.grid__row
-			.grid__col
-				.popup
-					.popup__inner
-						.popup__close
-							svg.popup__icon.svg
-								use(xlink:href='img/svgSprite.svg#icon__cross')
-						.popup__title Узнать цену
-						.popup__descr Вы можете заказать звонок на Ваш телефон через данную форму. Укажите в соответствующих полях Ваши контактные данные и наш сотрудник перезвонит Вам.
-						.popup__product
-							.popup__product-image
-								img(src='/assets/popup-good.png' alt='')
-							.popup__product-inner
-								.popup__product-title БМВЛ для телят АСТ/105
-								.popup__product-descr витаминно-минеральный коктейль для добавления в цельное молоко
-						form.form.popup__form
-							.form__grid
-								+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
-								+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
-								+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
-								+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
-							+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
-							button.form__button.button Оформить товар
+				.trash
+					.trash__item
+						a.js-popup(href='#popup-vacancy') Отправить резюме
+					.trash__item
+						a.js-popup(href='#popup-call') Заказать звонок
+					.trash__item
+						a.js-popup(href='#popup-price') Узнать цену
 
-block scripts
+block popups
+	+popup-vacancy
+	+popup-call
+	+popup-price
+
+block templates
 	template(id='drag-drop-file-tpl')
 		+drag-drop-file('__fileName__', '__size__', '__ext__')
 
