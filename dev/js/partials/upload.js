@@ -6,7 +6,8 @@ let uploadURL = 'https://some-site.ru/upload',
 		'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 		'application/pdf',
 		'image/jpeg',
-		'application/zip'
+		'application/zip',
+		'application/x-zip-compressed'
 	],
 	isProd = false;
 
