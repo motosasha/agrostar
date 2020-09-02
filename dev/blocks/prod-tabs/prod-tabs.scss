@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока prod-tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.prod-tabs {
+	&__inner {
+		display: flex;
+	}
+	&__item {
+		border-bottom: 3px solid transparent;
+		color: rgba(26, 23, 26, 0.4);
+		font-size: 17px;
+		line-height: 120%;
+		padding: 20px 8px 17px;
+		&_active {
+			border-bottom: 3px solid #003569;
+			color: #1a171a;
+		}
+		& + & {
+			margin-left: 10px;
+		}
+	}
+}

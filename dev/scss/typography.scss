@@ -77,7 +77,7 @@
 	}
 }
 @mixin popup-descr {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 120%;
 	@media (min-width: $screen-sm) {
 		font-size: 16px;
@@ -94,7 +94,7 @@
 	}
 }
 @mixin popup-product-descr {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 145%;
 	@media (min-width: $screen-sm) {
 		font-size: 16px;
@@ -156,9 +156,12 @@
 
 @mixin page-title {
 	font-family: $font-family-heading;
-	font-size: 48px;
+	font-size: 32px;
 	font-weight: 400;
 	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 48px;
+	}
 }
 @mixin page-paragraph {
 	font-size: 18px;
@@ -175,5 +178,9 @@
 @mixin prod-grid-link {
 	font-size: 15px;
 	font-weight: 500;
+	line-height: 120%;
+}
+@mixin prod-list {
+	font-size: 16px;
 	line-height: 120%;
 }

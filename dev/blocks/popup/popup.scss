@@ -91,7 +91,7 @@
 			width: 150%;
 		}
 	}
-	&__product-image {
+	&__product-img {
 		align-items: center;
 		background: #fff;
 		border-radius: 20px;
@@ -113,7 +113,7 @@
 		position: relative;
 		z-index: 2;
 	}
-	&__product-image + &__product-inner {
+	&__product-img + &__product-inner {
 		margin-top: 24px;
 		@media (min-width: $screen-sm) {
 			margin-left: 24px;

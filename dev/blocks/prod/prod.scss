@@ -1,0 +1,94 @@
+// В этом файле должны быть стили для БЭМ-блока prod, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.prod {
+	&__inner {
+		display: grid;
+		margin-bottom: 48px;
+		@media (min-width: $screen-lg) {
+			grid-template-columns: 1fr 1fr;
+			margin-bottom: 80px;
+		}
+	}
+	&__img {
+		align-items: center;
+		background: #fff;
+		border-radius: 20px;
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		padding: 24px 16px;
+		@media (min-width: $screen-lg) {
+			padding: 80px 0;
+		}
+		img {
+			max-height: 256px;
+			max-width: 256px;
+			@media (min-width: $screen-lg) {
+				max-height: 384px;
+				max-width: 384px;
+			}
+		}
+	}
+	&__info {
+		margin-top: 32px;
+		@media (min-width: $screen-lg) {
+			margin: 0;
+			padding-left: 36px;
+		}
+	}
+	&__title {
+		color: #1a171a;
+		margin: -20px 0 10px;
+	}
+	&__descr {
+		line-height: 128%;
+		width: 100% !important;
+	}
+	&__list {
+		margin-top: 40px;
+	}
+	&__list-key {
+		color: rgba(26, 23, 26, 0.4);
+		@include prod-list;
+	}
+	&__list-value {
+		color: #1a171a;
+		@include prod-list;
+		margin: 6px 0 18px;
+	}
+	&__button {
+		margin-top: 20px;
+		width: 206px;
+	}
+
+	&__file {
+		align-items: center;
+		display: flex;
+		margin: 36px 0 10px;
+	}
+	&__file-icon {
+		margin-right: 12px;
+		svg {
+			height: 32px;
+			width: 32px;
+		}
+	}
+	&__file-inner {}
+	&__file-title {
+		color: #1a171a;
+		font-size: 16px;
+		line-height: 120%;
+	}
+	&__file-link {
+		color: #af5267;
+		font-size: 14px;
+		line-height: 115%;
+	}
+	&__file-type {
+		color: rgba(0, 0, 0, 0.3);
+		margin-left: 6px;
+		text-decoration: none;
+	}
+}
