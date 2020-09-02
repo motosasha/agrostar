@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока back, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.back {
+	padding-bottom: 40px;
+	&__item {
+		color: #1e3d68;
+		@include back-link;
+	}
+}

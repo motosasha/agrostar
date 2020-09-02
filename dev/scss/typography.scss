@@ -147,3 +147,33 @@
 	font-weight: 500;
 	line-height: 120%;
 }
+
+@mixin back-link {
+	font-size: 18px;
+	line-height: 145%;
+	text-decoration: none;
+}
+
+@mixin page-title {
+	font-family: $font-family-heading;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 120%;
+}
+@mixin page-paragraph {
+	font-size: 18px;
+	line-height: 145%;
+}
+@mixin prod-grid-title {
+	font-size: 22px;
+	line-height: 120%;
+}
+@mixin prod-grid-descr {
+	font-size: 15px;
+	line-height: 120%;
+}
+@mixin prod-grid-link {
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 120%;
+}

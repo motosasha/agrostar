@@ -39,7 +39,7 @@ mixin header(title, isSub, sub)
 						.header__block
 							.breadcrumbs
 								a.breadcrumbs__item(href='/') Главная
-							.header__heading!= title
+							h1.header__heading!= title
 							if isSub === true
 								.header__subnav
 									+subnav(sub)

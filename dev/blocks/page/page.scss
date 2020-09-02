@@ -57,4 +57,20 @@
 			display: none;
 		}
 	}
+	&__title {
+		color: #1a171a;
+		@include page-title;
+		margin: 0 0 20px;
+	}
+	&__p {
+		color: rgba(26, 23, 26, 0.7);
+		@include page-paragraph;
+		margin: 0;
+		& + & {
+			margin-top: 16px;
+		}
+		@media (min-width: $screen-lg) {
+			width: 60%;
+		}
+	}
 }

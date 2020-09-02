@@ -1,0 +1,11 @@
+//- Все примеси в этом файле должны начинаться c имени блока (prod-grid)
+
+mixin prod-grid(items)
+	.prod-grid
+		each item, index in items
+			a.prod-grid__item(href='/product.html')
+				.prod-grid__img
+					img(src='/assets/product-good.png' alt='')
+				.prod-grid__title!= item.title
+				.prod-grid__descr!= item.descr
+				.prod-grid__link Подробнее ⯈

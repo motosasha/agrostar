@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока prod-grid, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.prod-grid {
+	display: grid;
+	grid-gap: 42px 36px;
+	padding-top: 50px;
+	@media (min-width: $screen-md) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (min-width: $screen-lg) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&__item {
+		align-items: center;
+		background: #fff;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		padding: 26px;
+		text-decoration: none;
+		transition: transform .125s ease;
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+	&__img {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-top: -40px;
+		min-height: 230px;
+		img {
+			max-height: 230px;
+			max-width: 230px;
+		}
+	}
+	&__title {
+		color: #1a171a;
+		@include prod-grid-title;
+		margin: 20px 0 10px;
+		width: 100%;
+	}
+	&__descr {
+		color: rgba(26, 23, 26, 0.5);
+		@include prod-grid-descr;
+		margin-bottom: 24px;
+		width: 100%;
+	}
+	&__link {
+		color: #1e3d68;
+		@include prod-grid-link;
+		margin-top: auto;
+		width: 100%;
+	}
+}

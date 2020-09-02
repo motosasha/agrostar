@@ -16,6 +16,7 @@
 		}
 		&_active {
 			color: #f8fafd;
+			cursor: default;
 			&::after {
 				@media (min-width: $screen-xl) {
 					background: #003569;

@@ -4,6 +4,6 @@ mixin subnav(items)
 	.subnav
 		each item, index in items
 			if item.active === true
-				a.subnav__item(class=item.active ? 'subnav__item_active': '', href= item.url)!= item.link
+				.subnav__item(class=item.active ? 'subnav__item_active': '')!= item.link
 			else
 				a.subnav__item(href= item.url)!= item.link
