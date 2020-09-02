@@ -1,0 +1,9 @@
+.trash {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 24px 0;
+	&__item {
+		margin-left: 32px;
+		padding: 24px 0;
+	}
+}

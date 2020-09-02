@@ -26,9 +26,11 @@
 		display: flex;
 		justify-content: center;
 		height: 32px;
+		opacity: 1;
+		padding: 0;
 		position: absolute;
 		right: 16px;
-		top: 16px;
+		top: 16px !important;
 		transition: background .25s ease;
 		width: 32px;
 		&:hover {
@@ -37,12 +39,13 @@
 		@media (min-width: $screen-sm) {
 			height: 52px;
 			right: 28px;
-			top: 28px;
+			top: 28px !important;
 			width: 52px;
 		}
 	}
 	&__icon {
 		height: 12px;
+		pointer-events: none;
 		width: 12px;
 		@media (min-width: $screen-sm) {
 			height: 16px;
@@ -129,4 +132,25 @@
 		color: rgba(26, 23, 26, 0.7);
 		@include popup-product-descr;
 	}
+}
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.25;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
 }

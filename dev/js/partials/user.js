@@ -36,7 +36,7 @@ $(document).ready(function() {
 				fileUploadedDelete($file);
 			});
 		}
-		$container.show();
+		$container.css('display','flex');
 	}
 
 	let $uploadFile = new UploadFile('upload', fileUploaded);
@@ -45,4 +45,15 @@ $(document).ready(function() {
 		$uploadFile.upload(this.files);
 	});
 
+	$('body').magnificPopup({
+		delegate: '.js-popup',
+		fixedBgPos: true,
+		fixedContentPos: true,
+		mainClass: 'mfp-fade',
+		midClick: true,
+		overflowY: 'auto',
+		preloader: false,
+		removalDelay: 300,
+		type: 'inline',
+	});
 });
