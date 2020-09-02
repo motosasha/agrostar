@@ -8,6 +8,10 @@
 	@media (min-width: $screen-md) {
 		border-radius: 0 0 100px 0;
 	}
+	&_transparent {
+		//background: transparent;
+		background: lightblue;
+	}
 	&__inner {
 		display: none;
 		padding: 24px 0;
@@ -51,6 +55,9 @@
 			height: 32px;
 			width: 161px;
 		}
+	}
+	&_transparent &__logo svg {
+		fill: #323441;
 	}
 	&__menu {
 		cursor: pointer;
