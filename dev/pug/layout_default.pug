@@ -71,12 +71,11 @@ html(class='no-js', lang='ru-RU')
 			.page__footer
 				include layout__part_footer.pug
 			.page__darker
-	script(src='/js/main.js')
+	+popup-call
 	block templates
 
-	+popup-call
-
-	block scripts
-
+	script(src='/js/main.js')
 	//удалить
 	script(src="/js/service.js")
+
+	block scripts
