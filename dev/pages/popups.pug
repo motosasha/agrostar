@@ -1,7 +1,5 @@
 extends ../pug/layout_service.pug
 
-block variables
-
 block meta
 	title Всплывашки
 
@@ -17,7 +15,6 @@ block pageMain
 					.trash__item
 						a.js-popup(href='#popup-price') Узнать цену
 
-block popups
 	+popup-vacancy
 	+popup-call
 	+popup-price
@@ -25,4 +22,3 @@ block popups
 block templates
 	template(id='drag-drop-file-tpl')
 		+drag-drop-file('__fileName__', '__size__', '__ext__')
-

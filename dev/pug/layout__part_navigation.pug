@@ -1,0 +1,18 @@
+mixin service-navigation__item(title, link, mod)
+	li.service-navigation__item
+		a.service-navigation__link(class= mod href="/" + link + ".html")= title
+
+nav.service-navigation(role="navigation")
+	.service-navigation__inner
+		ul.service-navigation__list
+			li.service-navigation__title Страницы
+			+service-navigation__item("Главная", "index")
+			+service-navigation__item("О компании", "about")
+			+service-navigation__item("Контакты", "contacts")
+			+service-navigation__item("Вакансия", "vacancy")
+			+service-navigation__item("Продукция", "production")
+			+service-navigation__item("Продукция список", "production-list")
+			+service-navigation__item("Товар", "product")
+			+service-navigation__item("Всплывашки", "popups")
+
+	button.service-navigation__trigger →
