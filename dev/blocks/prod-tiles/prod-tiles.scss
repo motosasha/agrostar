@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока prod-tiles, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.prod-tiles {
+	display: grid;
+	grid-gap: 16px;
+	@media (min-width: $screen-md) {
+
+	}
+	@media (min-width: $screen-lg) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&__item {
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		padding: 26px 26px 256px;
+		position: relative;
+		text-decoration: none;
+		transition: transform .125s ease;
+		@media (min-width: $screen-sm) {
+			padding: 26px 26px 80px;
+		}
+		@media (min-width: $screen-md) {
+			padding: 26px 26px 120px;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 26px 26px 240px;
+		}
+		@media (min-width: $screen-xl) {
+			padding: 26px 26px 220px;
+		}
+		&:hover {
+			transform: scale(1.04);
+		}
+		&_calf {
+			background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -130px bottom -50px, #295694;
+			background-size: 370px 300px;
+		}
+		&_cow {
+			background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -130px bottom -50px, #4671a2;
+			background-size: 370px 300px;
+		}
+		&_milk {
+			background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -130px bottom -50px, #70aad4;
+			background-size: 370px 300px;
+		}
+	}
+	&__title {
+		color: #fff;
+		@include prod-tile-title;
+		@media (min-width: $screen-sm) {
+			width: 50%;
+		}
+		@media (min-width: $screen-lg) {
+			width: 100%;
+		}
+		@media (min-width: $screen-xl) {
+			width: 50%;
+		}
+	}
+	&__descr {
+		color: rgba(255, 255, 255, 0.8);
+		@include prod-tile-descr;
+		margin-top: 21px;
+		@media (min-width: $screen-sm) {
+			width: 50%;
+		}
+		@media (min-width: $screen-lg) {
+			width: 100%;
+		}
+		@media (min-width: $screen-xl) {
+			width: 66%;
+		}
+	}
+	&__link {
+		color: rgba(255, 255, 255, 0.5);
+		@include prod-tile-link;
+		margin-top: auto;
+		position: absolute;
+		bottom: 26px;
+	}
+}

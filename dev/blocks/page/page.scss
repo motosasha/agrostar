@@ -15,6 +15,10 @@
 	}
 	&__main {
 		flex: 1 0 auto;
+		padding: 40px 0;
+		@media (min-width: $screen-md) {
+			padding: 64px 0;
+		}
 	}
 	&__footer {
 		bottom: 0;

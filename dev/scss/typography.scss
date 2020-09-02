@@ -131,3 +131,19 @@
 		line-height: 150%;
 	}
 }
+
+@mixin prod-tile-title {
+	font-family: $font-family-heading;
+	font-size: 27px;
+	font-weight: 500;
+	line-height: 100%;
+}
+@mixin prod-tile-descr {
+	font-size: 15px;
+	line-height: 120%;
+}
+@mixin prod-tile-link {
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 120%;
+}

@@ -7,3 +7,25 @@ block pageHeader
 	+header('title', false, 'sub')
 
 block pageMain
+	.grid
+		.grid__row
+			.grid__col
+				+prod-tiles(
+					[
+						{
+							class: 'calf',
+							title: 'Корма для выращивания телят',
+							isDescr: false,
+						},
+						{
+							class: 'cow',
+							title: 'Корма для здоровья коров',
+							isDescr: false,
+						},
+						{
+							class: 'milk',
+							title: 'Для повышения удоев',
+							isDescr: false,
+						}
+					]
+				)

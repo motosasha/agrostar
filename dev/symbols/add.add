@@ -1,3 +1,9 @@
 <view id="icon__select-view" viewBox="0 0 22 22" />
+<view id="img__calf-view" viewBox="0 22 370 300" />
+<view id="img__cow-view" viewBox="0 322 370 300" />
+<view id="img__milk-view" viewBox="0 622 370 300" />
 
-<use xlink:href="#icon__select" width="22" height="22" x="0" y="0" id="select"></use>
+<use xlink:href="#icon__select" width="22" height="22" x="0" y="0"></use>
+<use xlink:href="#img__calf" fill="#fff" width="370" height="300" x="0" y="22"></use>
+<use xlink:href="#img__cow" fill="#fff" width="370" height="300" x="0" y="322"></use>
+<use xlink:href="#img__milk" fill="#fff" width="370" height="300" x="0" y="622"></use>

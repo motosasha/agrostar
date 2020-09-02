@@ -1,0 +1,10 @@
+//- Все примеси в этом файле должны начинаться c имени блока (prod-tiles)
+
+mixin prod-tiles(items)
+	.prod-tiles(class=isMainPage ? 'prod-tiles_main-page': '')
+		each item, index in items
+			a.prod-tiles__item(class='prod-tiles__item_' + item.class, href='#')
+				.prod-tiles__title!= item.title
+				if item.isDescr === true
+					.prod-tiles__descr!= item.descr
+				.prod-tiles__link Подробнее ⯈
