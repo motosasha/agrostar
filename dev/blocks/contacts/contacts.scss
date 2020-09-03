@@ -70,14 +70,13 @@
 	}
 
 	&__map {
-		background: #000;
 		height: 280px;
-		margin: 32px 0 -32px;
+		margin: 32px 0;
 		position: relative;
 		width: 100%;
 		@media (min-width: $screen-sm) {
 			height: 400px;
-			margin: 48px 0 -48px;
+			margin: 48px 0;
 		}
 		@media (min-width: $screen-lg) {
 			height: 772px;
@@ -94,6 +93,7 @@
 				left: 0;
 				position: absolute;
 				width: 100%;
+				z-index: 2;
 			}
 		}
 		@media (min-width: $screen-xl) {
