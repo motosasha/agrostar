@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока map-marker, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.map-marker {
+	align-items: center;
+	background: #fff;
+	border-radius: 40px;
+	box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+	display: flex;
+	padding: 12px 28px 12px 12px;
+
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 2;
+	&::after {
+		border-color: transparent #fff transparent transparent;
+		border-style: solid;
+		border-width: 0 24px 24px 0;
+		bottom: -24px;
+		content: '';
+		display: block;
+		height: 0;
+		position: absolute;
+		right: 34px;
+		width: 0;
+	}
+	&__icon {
+		align-items: center;
+		background: #1e3d68;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		height: 44px;
+		width: 44px;
+		svg {
+			fill: #fff;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&__title {
+		color: #1a171a;
+		font-size: 20px;
+		line-height: 115%;
+		margin-left: 14px;
+	}
+}
