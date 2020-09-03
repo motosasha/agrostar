@@ -1,0 +1,54 @@
+// В этом файле должны быть стили для БЭМ-блока vacancy-apply, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.vacancy-apply {
+	background: #fff;
+	box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+	border-radius: 20px;
+	padding: 38px 35px 42px;
+	&__inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 25px;
+		@media (min-width: $screen-sm) {
+			flex-direction: row;
+		}
+		@media (min-width: $screen-lg) {
+			flex-direction: column;
+		}
+		@media (min-width: $screen-xl) {
+			flex-direction: row;
+		}
+	}
+	&__icon {
+		flex: 0 0 auto;
+		height: 155px;
+		width: 133px;
+	}
+	&__info {
+		margin: 25px 0 0;
+		@media (min-width: $screen-sm) {
+			margin: 0 0 0 25px;
+		}
+		@media (min-width: $screen-lg) {
+			margin: 25px 0 0;
+		}
+		@media (min-width: $screen-xl) {
+			margin: 0 0 0 25px;
+		}
+	}
+	&__title {
+		color: #1a171a;
+		@include vacancy-apply-title;
+	}
+	&__descr {
+		color: rgba(0, 0, 0, 0.6);
+		@include vacancy-apply-descr;
+		margin-top: 10px;
+	}
+	&__button {
+		width: 100%;
+	}
+}

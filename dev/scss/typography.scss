@@ -184,3 +184,105 @@
 	font-size: 16px;
 	line-height: 120%;
 }
+
+@mixin tabs-caption {
+	font-size: 15px;
+	line-height: 120%;
+	@media (min-width: $screen-md) {
+		font-size: 17px;
+	}
+}
+@mixin tabs-p {
+	font-size: 14px;
+	line-height: 135%;
+	@media (min-width: $screen-sm) {
+		font-size: 17px;
+	}
+}
+@mixin tabs-h1 {
+	font-family: $font-family-heading;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 125%;
+	@media (min-width: $screen-sm) {
+		font-size: 27px;
+	}
+}
+@mixin tabs-h2 {
+	font-family: $font-family-heading;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 24px;
+	}
+}
+@mixin tabs-h3 {
+	font-family: $font-family-heading;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 20px;
+	}
+}
+@mixin tabs-li {
+	font-size: 14px;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 18px;
+	}
+}
+
+@mixin vacancy-tile-key {
+	font-size: 12px;
+	line-height: 115%;
+	@media (min-width: $screen-sm) {
+		font-size: 14px;
+	}
+}
+@mixin vacancy-tile-value {
+	font-size: 16px;
+	line-height: 115%;
+	@media (min-width: $screen-sm) {
+		font-size: 20px;
+	}
+}
+
+@mixin vacancy-apply-title {
+	font-size: 28px;
+	line-height: 118%;
+}
+@mixin vacancy-apply-descr {
+	font-size: 14px;
+	line-height: 115%;
+}
+
+@mixin contacts-title {
+	font-size: 15px;
+	line-height: 18px;
+}
+@mixin contacts-phone {
+	font-size: 16px;
+	line-height: 120%;
+	text-decoration: none;
+	@media (min-width: $screen-sm) {
+		font-size: 22px;
+	}
+}
+@mixin contacts-mail {
+	font-size: 16px;
+	line-height: 120%;
+	text-decoration-line: underline;
+	@media (min-width: $screen-sm) {
+		font-size: 22px;
+	}
+}
+@mixin contacts-address {
+	font-size: 16px;
+	font-style: normal;
+	line-height: 120%;
+	@media (min-width: $screen-sm) {
+		font-size: 22px;
+	}
+}

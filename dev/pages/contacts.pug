@@ -4,3 +4,50 @@ block pageHeader
 	+header('Контакты', false)
 
 block pageMain
+	.contacts
+		.grid
+			.grid__row
+				.grid__col
+					.contacts__inner
+						.contacts__item
+							.contacts__icon
+								svg.vacancy-apply__icon.svg
+									use(xlink:href='img/svgSprite.svg#icon__phone')
+							.contacts__info
+								.contacts__title Телефоны:
+								a(href='tel:88432788654').contacts__phone +7 843 278 86 54
+								a(href='tel:89673683323').contacts__phone +7 967 36 83 323
+						.contacts__item
+							.contacts__icon
+								svg.vacancy-apply__icon.svg
+									use(xlink:href='img/svgSprite.svg#icon__mail')
+							.contacts__info
+								.contacts__title Пишите нам:
+								a(href='mailto:servisagro2@gmail.com').contacts__mail servisagro2@gmail.com
+						.contacts__item
+							.contacts__icon
+								svg.vacancy-apply__icon.svg
+									use(xlink:href='img/svgSprite.svg#icon__compass')
+							.contacts__info
+								.contacts__title Заходите в гости:
+								address.contacts__address.
+									РТ, г. Казань,<br>
+									ул. Поперечно-Отарская, д. 100
+		.contacts__map
+		//
+			Мы находимся тут
+	.grid
+		.grid__row
+			.grid__col
+				.feedback
+					.feedback__title Есть вопросы? Напишите нам!
+					.feedback__descr Если у вас есть вопросы но вы не хотите нам звонить или заходить в гости, отправьте нам сообщение через форму, и мы отправим вам ответ в течении некоторого времени
+					form.form.feedback__form
+						.form__grid
+							+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+							+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+							+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+							+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+						+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+						.form__error Ошибка формы
+						button.form__button.button Отправить

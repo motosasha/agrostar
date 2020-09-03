@@ -5,6 +5,8 @@
 .header {
 	background: #4671a2;
 	border-radius: 0 0 64px 0;
+	position: relative;
+	z-index: 2;
 	@media (min-width: $screen-md) {
 		border-radius: 0 0 100px 0;
 	}

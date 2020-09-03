@@ -56,4 +56,9 @@ $(document).ready(function() {
 		removalDelay: 300,
 		type: 'inline',
 	});
+
+	$('.prod-tabs').on('click', '.prod-tabs__item:not(.prod-tabs__item_active)', function() {
+		$(this).addClass('prod-tabs__item_active').siblings().removeClass('prod-tabs__item_active')
+			.closest('.prod-tabs').find('.prod-tabs-content__item').removeClass('prod-tabs-content__item_active').eq($(this).index()).addClass('prod-tabs-content__item_active');
+	});
 });

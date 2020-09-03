@@ -1,43 +1,31 @@
-// В этом файле должны быть стили для БЭМ-блока prod-tabs-content, его элементов,
+// В этом файле должны быть стили для БЭМ-блока vacancy, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.prod-tabs-content {
-	background: #fff;
-	padding: 20px 0 40px;
-	@media (min-width: $screen-md) {
-		padding: 30px 0 80px;
-	}
-	&__inner {}
-	&__item {
-		display: none;
-		&_active {
-			display: block;
-		}
-	}
+.vacancy {
 	h3 {
 		color: #1a171a;
 		@include tabs-h1;
-		margin: 0 0 16px;
+		margin: 0 0 25px;
 	}
 	h4 {
 		color: #1a171a;
 		@include tabs-h2;
-		margin: 32px 0 16px;
+		margin: 40px 0 25px;
 	}
 	h5 {
 		color: #1a171a;
 		@include tabs-h3;
-		margin: 24px 0 16px;
+		margin: 32px 0 25px;
 	}
 	p {
 		@include tabs-p;
-		margin: 0 0 16px;
+		margin: 0 0 25px;
 	}
 	ol,
 	ul {
 		list-style: none;
-		margin: 16px 0;
+		margin: 25px 0 40px;
 		padding: 0;
 	}
 	ol {
@@ -54,7 +42,7 @@
 		}
 	}
 	li + li {
-		margin-top: 8px;
+		margin-top: 16px;
 	}
 	ol li {
 		padding-left: 24px;

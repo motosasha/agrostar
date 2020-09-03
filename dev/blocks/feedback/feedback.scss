@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback {
+	background: #f1f2f4;
+	border-radius: 25px;
+	padding: 24px 16px;
+	position: relative;
+	z-index: 2;
+	@media (min-width: $screen-sm) {
+		padding: 48px 40px;
+	}
+	@media (min-width: $screen-lg) {
+		padding: 48px 80px;
+	}
+	@media (min-width: $screen-xl) {
+		padding: 64px 94px;
+	}
+	&__title {
+		color: #000;
+		@include popup-title;
+	}
+	&__descr {
+		color: rgba(0, 0, 0, 0.5);
+		@include popup-descr;
+		margin: 12px 0 22px;
+	}
+	&__form {
+		display: grid;
+		grid-gap: 24px;
+		margin-top: 24px;
+		@media (min-width: $screen-lg) {
+			grid-gap: 32px;
+			margin-top: 48px;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+//- Все примеси в этом файле должны начинаться c имени блока (vacancy-tiles)
+
+mixin vacancy-tiles(items)
+	.vacancy-tiles
+		each item, index in items
+			.vacancy-tiles__item
+				.vacancy-tiles__icon
+					svg.svg
+						use(xlink:href='img/svgSprite.svg#icon__' + item.icon)
+				.vacancy-tiles__info
+					.vacancy-tiles__key!= item.key
+					.vacancy-tiles__value!= item.value

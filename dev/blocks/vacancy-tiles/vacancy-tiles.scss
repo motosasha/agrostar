@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока vacancy-tiles, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.vacancy-tiles {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 24px 0 40px;
+	@media (min-width: $screen-sm) {
+		padding: 40px 0 60px;
+	}
+	&__item {
+		align-items: center;
+		background: #fff;
+		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		border-radius: 54px;
+		display: flex;
+		margin: 0 16px 8px 0;
+		padding: 8px 16px 8px 8px;
+		@media (min-width: $screen-sm) {
+			margin: 0 26px 16px 0;
+			padding: 14px 32px 14px 14px;
+		}
+	}
+	&__icon {
+		align-items: center;
+		background: #1e3d68;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		height: 32px;
+		width: 32px;
+		@media (min-width: $screen-sm) {
+			height: 44px;
+			width: 44px;
+		}
+		svg {
+			fill: #fff;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&__info {
+		margin-left: 14px;
+	}
+	&__key {
+		color: rgba(26, 23, 26, 0.4);
+		@include vacancy-tile-key;
+
+	}
+	&__value {
+		color: #1a171a;
+		@include vacancy-tile-value;
+	}
+}

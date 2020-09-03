@@ -3,18 +3,49 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .prod-tabs {
-	&__inner {
+	&__top {
 		display: flex;
+		height: 60px;
+		margin: 0 -16px;
+		overflow: hidden;
+		width: calc(100% + 32px);
+	}
+	&__inner {
+		align-items: flex-start;
+		display: flex;
+		height: 96px;
+		margin: 0 -8px;
+		overflow: hidden;
+-webkit-overflow-scrolling: touch;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			flex: 0 0 auto;
+			height: 100%;
+			width: 16px;
+		}
 	}
 	&__item {
 		border-bottom: 3px solid transparent;
 		color: rgba(26, 23, 26, 0.4);
-		font-size: 17px;
-		line-height: 120%;
-		padding: 20px 8px 17px;
+		cursor: pointer;
+		@include tabs-caption;
+		padding: 16px 8px 13px;
+		transition: all .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 20px 8px 17px;
+		}
+		&:hover {
+			color: #1a171a;
+		}
 		&_active {
 			border-bottom: 3px solid #003569;
 			color: #1a171a;
+			cursor: default;
 		}
 		& + & {
 			margin-left: 10px;
