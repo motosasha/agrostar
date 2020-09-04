@@ -43,13 +43,16 @@
 	}
 	&__link {
 		align-items: center;
-		color: #295694;
+		color: #fff;
 		display: flex;
 		font-size: 17px;
 		line-height: 100%;
 		text-decoration: none;
 		transition: color .25s ease;
 		user-select: none;
+	}
+	.header_transparent &__link {
+		color: #295694;
 		@media (min-width: $screen-xl) {
 			color: #fff;
 		}
