@@ -5,10 +5,10 @@
 .welcome {
 	margin: 0;
 	overflow: hidden;
-	padding: 80px 0 40px;
-	@media (min-width: $screen-md) {
+	padding: 80px 0;
+	@media (min-width: $screen-lg) {
 		height: 876px;
-		margin: -64px 0 -264px;
+		margin: -64px 0 -200px;
 		padding: 194px 0 0;
 	}
 	&__inner {
