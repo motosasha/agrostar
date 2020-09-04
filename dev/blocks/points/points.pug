@@ -1,0 +1,10 @@
+//- Все примеси в этом файле должны начинаться c имени блока (points)
+
+mixin points(items)
+	.points
+		each item, index in items
+			.points__item
+				.points__tile
+					svg.points__icon.svg
+						use(xlink:href='img/svgSprite.svg#icon__' + item.icon)
+				.points__title!= item.title

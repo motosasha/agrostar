@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока points, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.points {
+	display: grid;
+	grid-gap: 32px 24px ;
+	grid-template-columns: 1fr;
+	@media (min-width: $screen-sm) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (min-width: $screen-md) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media (min-width: $screen-xl) {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	&__item {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+	&__tile {
+		align-items: center;
+		background: #fff;
+		box-shadow: 0 9px 21px #dfe9eb;
+		border-radius: 20px;
+		display: flex;
+		justify-content: center;
+		height: 86px;
+		width: 86px;
+	}
+	&__icon {
+		fill: #323441;
+		height: 57px;
+		width: 57px;
+	}
+	&__title {
+		color: #323441;
+		@include point-title;
+		margin: 20px 16px 0;
+	}
+}

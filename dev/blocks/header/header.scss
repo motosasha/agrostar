@@ -11,8 +11,10 @@
 		border-radius: 0 0 100px 0;
 	}
 	&_transparent {
-		//background: transparent;
-		background: lightblue;
+		background: transparent;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 	&__inner {
 		display: none;
@@ -67,8 +69,7 @@
 		height: 32px;
 		text-align: center;
 		text-decoration: none;
-		transition: background .25s ease,
-					transform .25s ease;
+		transition: transform .25s ease;
 		width: 32px;
 		will-change: transform;
 	}
@@ -80,10 +81,6 @@
 		margin: auto;
 		position: relative;
 		width: 20px;
-		.nav-open & {
-			height: 0;
-			width: 24px;
-		}
 		&::after,
 		&::before {
 			background: $typography-inverse;
@@ -98,17 +95,16 @@
 		}
 		&::after {
 			transform: translateY(5px) rotate(0);
-			.nav-open & {
-				transform: translateY(-1px) rotate(-225deg);
-				width: 24px;
-			}
 		}
 		&::before {
 			transform: translateY(-5px) rotate(0);
-			.nav-open & {
-				transform: translateY(-1px) rotate(225deg);
-				width: 24px;
-			}
+		}
+	}
+	&_transparent &__menu-icon {
+		background: #323441;
+		&::after,
+		&::before {
+			background: #323441;
 		}
 	}
 	&__call {
@@ -123,6 +119,9 @@
 		fill: #fff;
 		height: 24px;
 		width: 24px;
+	}
+	&_transparent &__icon {
+		fill: #323441;
 	}
 	&__heading {
 		color: #f8fafd;

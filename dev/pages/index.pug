@@ -7,25 +7,71 @@ block pageHeader
 	+header('title', false, 'sub')
 
 block pageMain
-	.grid
-		.grid__row
-			.grid__col
-				+prod-tiles(
-					[
-						{
-							class: 'milk',
-							title: 'Для повышения удоев',
-							isDescr: false,
-						},
-						{
-							class: 'cow',
-							title: 'Корма для здоровья коров',
-							isDescr: false,
-						},
-						{
-							class: 'calf',
-							title: 'Корма для выращивания телят',
-							isDescr: false,
-						},
-					]
-				)
+	section.welcome
+		.grid.welcome__inner
+			.grid__row
+				.grid__col
+					.welcome__img
+					.welcome__info
+						h1.welcome__title Продажа кормов для сельскохоз животных
+						.welcome__descr Наши продукты позволяют оптимальным образом сбалансировать рацион, по питательным веществам, энергии и микроэлементам.
+						a.welcome__button.button(href='/production.html') Продукция
+	section.section
+		.grid
+			.grid__row
+				.grid__col
+					+prod-tiles(
+						[
+							{
+								class: 'milk',
+								title: 'Для повышения удоев',
+								isDescr: false,
+							},
+							{
+								class: 'cow',
+								title: 'Корма для здоровья коров',
+								isDescr: false,
+							},
+							{
+								class: 'calf',
+								title: 'Корма для выращивания телят',
+								isDescr: false,
+							},
+						]
+					)
+	section.section
+		.grid
+			.grid__row
+				.grid__col
+					.services
+						h2.page__title.page__title_1 Консультационные услуги
+						p.page__p Высочайшие стандарты качества продукции и удовлетворенность клиентов являются ключевыми приоритетами компании
+						+services-tiles(
+							[
+								{
+									class: 'audit',
+									title: 'Аудит хозяйств',
+								},
+								{
+									class: 'diet',
+									title: 'Расчет рациона',
+								},
+								{
+									class: 'lab',
+									title: 'Лабораторные исследования',
+								}
+							]
+						)
+	section.section
+		.grid
+			.grid__row
+				.grid__col
+					+points(
+						[
+							{icon: 'like',title: 'Высокое качество производимой продукции'},
+							{icon: 'box',title: 'Собственное производство'},
+							{icon: 'achievement',title: 'Высокий уровень специалистов'},
+							{icon: 'lab',title: 'Собственная лаборатория'},
+							{icon: '12',title: '12 лет на рынке'}
+						]
+					)

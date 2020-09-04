@@ -167,6 +167,10 @@
 	font-size: 18px;
 	line-height: 145%;
 }
+@mixin page-paragraph-secondary {
+	font-size: 15px;
+	line-height: 153%;
+}
 @mixin prod-grid-title {
 	font-size: 22px;
 	line-height: 120%;
@@ -258,6 +262,26 @@
 	line-height: 115%;
 }
 
+@mixin vacancy-list-heading {
+	font-size: 15px;
+	line-height: 175%;
+}
+@mixin vacancy-list-title {
+	font-size: 16px;
+	line-height: 130%;
+	@media (min-width: $screen-sm) {
+		font-size: 20px;
+	}
+}
+@mixin vacancy-list-place {
+	font-size: 16px;
+	line-height: 120%;
+}
+@mixin vacancy-list-day {
+	font-size: 14px;
+	line-height: 115%;
+}
+
 @mixin contacts-title {
 	font-size: 15px;
 	line-height: 18px;
@@ -285,4 +309,10 @@
 	@media (min-width: $screen-sm) {
 		font-size: 22px;
 	}
+}
+
+@mixin point-title {
+	font-size: 18px;
+	line-height: 120%;
+	text-align: center;
 }

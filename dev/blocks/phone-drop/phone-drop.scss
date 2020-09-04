@@ -43,13 +43,16 @@
 	}
 	&__link {
 		align-items: center;
-		color: #fff;
+		color: #295694;
 		display: flex;
 		font-size: 17px;
 		line-height: 100%;
 		text-decoration: none;
 		transition: color .25s ease;
 		user-select: none;
+		@media (min-width: $screen-xl) {
+			color: #fff;
+		}
 	}
 	&_open &__link {
 		color: #295694;
@@ -65,6 +68,12 @@
 		width: 26px;
 		&:hover {
 			background: rgba(255,255,255,.125);
+		}
+		svg {
+			fill: #295694;
+			@media (min-width: $screen-xl) {
+				fill: #fff;
+			}
 		}
 	}
 	&_open &__trigger svg {

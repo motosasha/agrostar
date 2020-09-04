@@ -1,9 +1,16 @@
 <view id="icon__select-view" viewBox="0 0 22 22" />
-<view id="img__calf-view" viewBox="0 22 370 300" />
-<view id="img__cow-view" viewBox="0 322 370 300" />
-<view id="img__milk-view" viewBox="0 622 370 300" />
-
 <use xlink:href="#icon__select" width="22" height="22" x="0" y="0"></use>
+
+<view id="img__calf-view" viewBox="0 22 370 300" />
 <use xlink:href="#img__calf" fill="#fff" width="370" height="300" x="0" y="22"></use>
+<view id="img__cow-view" viewBox="0 322 370 300" />
 <use xlink:href="#img__cow" fill="#fff" width="370" height="300" x="0" y="322"></use>
+<view id="img__milk-view" viewBox="0 622 370 300" />
 <use xlink:href="#img__milk" fill="#fff" width="370" height="300" x="0" y="622"></use>
+
+<view id="img__audit-view" viewBox="0 922 220 197" />
+<use xlink:href="#img__audit" fill="#fff" width="220" height="197" x="0" y="922"></use>
+<view id="img__diet-view" viewBox="0 1119 220 197" />
+<use xlink:href="#img__diet" fill="#fff" width="220" height="197" x="0" y="1119"></use>
+<view id="img__lab-view" viewBox="0 1316 220 197" />
+<use xlink:href="#img__lab" fill="#fff" width="220" height="197" x="0" y="1316"></use>

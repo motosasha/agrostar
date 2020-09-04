@@ -1,10 +1,14 @@
-// В этом файле должны быть стили для БЭМ-блока prod-tiles, его элементов,
+// В этом файле должны быть стили для БЭМ-блока services-tiles, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.prod-tiles {
+.services-tiles {
 	display: grid;
 	grid-gap: 16px;
+	padding: 40px 0 0;
+	@media (min-width: $screen-md) {
+		grid-template-columns: 1fr 1fr;
+	}
 	@media (min-width: $screen-lg) {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
@@ -12,40 +16,31 @@
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
-		padding: 26px 26px 256px;
+		padding: 26px 26px 170px;
 		position: relative;
 		text-decoration: none;
 		transition: transform .125s ease;
 		@media (min-width: $screen-sm) {
-			padding: 26px 26px 80px;
-		}
-		@media (min-width: $screen-md) {
 			padding: 26px 26px 120px;
 		}
-		@media (min-width: $screen-lg) {
-			padding: 26px 26px 240px;
-		}
-		@media (min-width: $screen-xl) {
-			padding: 26px 26px 220px;
+		@media (min-width: $screen-md) {
+			padding: 26px 26px 170px;
 		}
 		&:hover {
 			transform: scale(1.04);
 		}
-		&_calf {
-			background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -130px bottom -50px, #295694;
-			background-size: 370px 300px;
+		&_audit {
+			background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -46px bottom -47px, #3a7ad3;
+			background-size: 220px 197px;
 		}
-		&_cow {
-			background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -130px bottom -50px, #4671a2;
-			background-size: 370px 300px;
+		&_diet {
+			background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -46px bottom -47px, #669fe0;
+			background-size: 220px 197px;
 		}
-		&_milk {
-			background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -130px bottom -50px, #70aad4;
-			background-size: 370px 300px;
+		&_lab {
+			background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -46px bottom -47px, #88ceff;
+			background-size: 220px 197px;
 		}
-	}
-	&_main-page &__item {
-		min-height: 248px;
 	}
 	&__title {
 		color: #fff;
@@ -54,7 +49,7 @@
 			width: 50%;
 		}
 		@media (min-width: $screen-lg) {
-			width: 100%;
+			width: 50%;
 		}
 		@media (min-width: $screen-xl) {
 			width: 50%;

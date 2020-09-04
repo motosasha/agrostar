@@ -70,7 +70,13 @@
 			margin-top: 16px;
 		}
 		@media (min-width: $screen-lg) {
-			width: 60%;
+			width: 70%;
+		}
+
+		&_secondary {
+			color: rgba(26, 23, 26, 0.4);
+			@include page-paragraph-secondary;
+			margin-top: 18px;
 		}
 	}
 }

@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока vacancy-list-tiles, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.vacancy-list-tiles {
+	display: flex;
+	flex-direction: column;
+	&__item {
+		align-items: center;
+		background: #fff;
+		border-radius: 20px;
+		color: #1a171a;
+		display: flex;
+		justify-content: space-between;
+		padding: 16px;
+		text-decoration: none;
+		transition: box-shadow .25s ease;
+		@media (min-width: $screen-sm) {
+			padding: 28px 50px 28px 34px;
+		}
+		&:hover {
+			box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		}
+		& + & {
+			margin-top: 24px;
+		}
+	}
+	&__info {}
+	&__title {
+		color: #1a171a;
+		@include vacancy-list-title;
+		max-width: 920px;
+	}
+	&__row {
+		align-items: flex-end;
+		display: flex;
+		margin-top: 24px;
+	}
+	&__place {
+		color: #1e3d68;
+		@include vacancy-list-place;
+	}
+	&__day {
+		color: rgba(0, 0, 0, 0.49);
+		@include vacancy-list-day;
+		margin-left: 28px;
+	}
+	&__icon {
+		align-items: center;
+		background: #f1f2f4;
+		border-radius: 50%;
+		display: flex;
+		flex: 0 0 auto;
+		justify-content: center;
+		height: 52px;
+		margin-left: 24px;
+		transition: background .25s ease;
+		width: 52px;
+		svg {
+			fill: #cdd4e3;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&__item:hover &__icon {
+		background: #1e3d68;
+		svg {
+			fill: #fff;
+		}
+	}
+}
