@@ -10,6 +10,11 @@ $(document).ready(function() {
 	$dropTrigger.click(function () {
 		$('.phone-drop').toggleClass('phone-drop_open')
 	});
+	$(document).on('click', function(ev){
+		if ($(ev.target).parents('.header__drop').length === 0) {
+			$('.phone-drop').removeClass('phone-drop_open');
+		}
+	});
 
 	$('input[type="tel"]').mask("+7(999)999-99-99");
 
