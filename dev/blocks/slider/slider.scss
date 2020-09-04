@@ -1,0 +1,239 @@
+// В этом файле должны быть стили для БЭМ-блока slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider {
+	&_company {}
+	&_production {}
+	&_production_mini {}
+	&_about {}
+	&_about_mini {
+		border-radius: 10px;
+		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		margin-top: 16px;
+		@media (min-width: $screen-md) {
+			border-radius: 20px;
+			left: 180px;
+			margin-top: 0;
+			position: absolute;
+			top: calc(100% - 80px);
+			width: calc(100% - 220px);
+			&::before {
+				border-color: transparent transparent transparent #fff;
+				border-style: solid;
+				border-width: 20px 0 0 20px;
+				content: '';
+				display: block;
+				height: 0;
+				left: 38px;
+				position: absolute;
+				top: -20px;
+				width: 0;
+			}
+		}
+		@media (min-width: $screen-lg) {
+			left: 210px;
+			width: calc(100% - 280px);
+		}
+		@media (min-width: $screen-xl) {
+			width: 536px;
+		}
+	}
+	&_lab {
+		margin-top: 39px;
+	}
+	&_lab_mini {
+		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		margin-top: 16px;
+		@media (min-width: $screen-md) {
+			border-radius: 20px;
+		}
+		@media (min-width: $screen-lg) {
+			margin-top: 0;
+			position: absolute;
+			right: 40px;
+			top: 50%;
+			width: 640px;
+			&::before {
+				border-color: transparent transparent transparent #fff;
+				border-style: solid;
+				border-width: 34px 0 0 34px;
+				content: '';
+				display: block;
+				height: 0;
+				left: 34px;
+				position: absolute;
+				top: -34px;
+				width: 0;
+			}
+		}
+		@media (min-width: $screen-xl) {
+			width: 560px;
+		}
+	}
+	&__slide {
+		border-radius: 10px;
+		display: block !important;
+		overflow: hidden;
+		@media (min-width: $screen-md) {
+			border-radius: 20px;
+		}
+	}
+	&_production_mini &__slide {
+		border-radius: 0;
+	}
+	img {
+		height: auto;
+		width: 100%;
+	}
+	.slick-arrow {
+		align-items: center;
+		background: #fff;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		height: 40px;
+		transform: none;
+		transition: all .25s ease;
+		width: 40px;
+		z-index: 2;
+		@media (min-width: $screen-md) {
+			height: 80px;
+			width: 80px;
+		}
+		svg {
+			display: block;
+			fill: #e2e2e2;
+			height: 16px;
+			width: 16px;
+			@media (min-width: $screen-md) {
+				height: 24px;
+				width: 24px;
+			}
+		}
+		&::before {
+			content: none;
+		}
+		&:hover {
+			background: #1e3d68;
+			svg {
+				fill: #fff;
+			}
+		}
+	}
+	.slick-prev {
+		border-radius: 0 0 0 10px;
+		left: 0;
+		top: auto;
+		@media (min-width: $screen-md) {
+			border-radius: 0 0 0 20px;
+		}
+	}
+	.slick-next {
+		border-radius: 0 10px 0 0;
+		left: 40px;
+		top: auto;
+		@media (min-width: $screen-md) {
+			border-radius: 0 20px 0 0;
+			left: 80px;
+		}
+	}
+	&_lab {
+		.slick-prev {
+			bottom: auto;
+			border-radius: 0 0 0 10px;
+			left: auto;
+			right: 40px;
+			top: 0;
+			@media (min-width: $screen-md) {
+				bottom: auto;
+				border-radius: 0 0 0 20px;
+				left: auto;
+				right: 80px;
+				top: 0;
+			}
+		}
+		.slick-next {
+			bottom: auto;
+			border-radius: 0 10px 0 0;
+			left: auto;
+			right: 0;
+			top: 0;
+			@media (min-width: $screen-md) {
+				bottom: auto;
+				border-radius: 0 20px 0 0;
+				left: auto;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+	&__info {
+		margin-top: 24px;
+		max-width: 520px;
+	}
+	&__title {
+		color: #1a171a;
+		@include slider-mini;
+	}
+	&__descr {
+		color: rgba(0, 0, 0, 0.6);
+		@include slider-mini;
+		margin-top: 8px;
+	}
+
+	&__bubble {
+		background: #fff;
+		border-radius: 20px;
+		padding: 28px;
+	}
+	&__bubble-title {
+		color: #1a171a;
+		@include slider-bubble-title;
+	}
+	&__bubble-descr {
+		color: rgba(0, 0, 0, 0.6);
+		@include slider-bubble-descr;
+		margin-top: 8px;
+	}
+
+	&__lab {
+		background: #fff;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		padding: 28px 20px;
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+			padding: 51px 44px;
+		}
+	}
+	&__lab-icon {
+		flex: 0 0 auto;
+		height: 50px;
+		width: 50px;
+	}
+	&__lab-inner {
+		margin: 27px 0 0 0;
+		@media (min-width: $screen-md) {
+			margin: 0 0 0 27px;
+		}
+	}
+	&__lab-title {
+		color: #1a171a;
+		@include slider-lab-title;
+		margin-bottom: 24px;
+	}
+	&__lab-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			color: rgba(26, 23, 26, 0.7);
+			@include slider-lab-list;
+		}
+		li + li {
+			margin-top: 16px;
+		}
+	}
+}

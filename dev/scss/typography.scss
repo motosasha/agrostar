@@ -316,3 +316,40 @@
 	line-height: 120%;
 	text-align: center;
 }
+
+@mixin slider-mini {
+	font-size: 18px;
+	line-height: 120%;
+}
+@mixin slider-side-p {
+	font-size: 18px;
+	line-height: 150%;
+}
+@mixin slider-side-sub {
+	font-size: 27px;
+	font-weight: 300;
+	line-height: 122%;
+}
+@mixin slider-bubble-title {
+	font-size: 20px;
+	line-height: 115%;
+}
+@mixin slider-bubble-descr {
+	font-size: 14px;
+	line-height: 115%;
+}
+@mixin slider-lab-title {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 122%;
+	@media (min-width: $screen-md) {
+		font-size: 27px;
+	}
+}
+@mixin slider-lab-list {
+	font-size: 14px;
+	line-height: 144%;
+	@media (min-width: $screen-md) {
+		font-size: 18px;
+	}
+}

@@ -15,5 +15,11 @@
 		&_lg_7 {
 			@include col(lg, 7, $grid-columns, 32px);
 		}
+		&_xl_4 {
+			@include col(xl, 4, $grid-columns, 32px);
+		}
+		&_xl_8 {
+			@include col(xl, 8, $grid-columns, 32px);
+		}
 	}
 }

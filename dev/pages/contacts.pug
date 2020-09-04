@@ -34,23 +34,18 @@ block pageMain
 									РТ, г. Казань,<br>
 									ул. Поперечно-Отарская, д. 100
 		.contacts__map(id="map")
+			//-.map-marker
+				.map-marker__icon
+					svg.svg
+						use(xlink:href='img/svgSprite.svg#icon__pin')
+				.map-marker__title Мы находимся тут
 			a(class="dg-widget-link", href="http://2gis.ru/kazan/firm/2956015536780124/center/49.127821,55.722249/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap") Посмотреть на карте Казани
-
 			.dg-widget-link
 				a(href="http://2gis.ru/kazan/center/49.127821,55.722249/zoom/16/routeTab/rsType/bus/to/49.127821,55.722249╎АгроСтар-Трейд+, производственно-торговая компания?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route") Найти проезд до АгроСтар-Трейд+, производственно-торговая компания
 			script(charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js")
 			script(charset="utf-8").
 				new DGWidgetLoader({"width":"100%","height":"100%","borderColor":"#a3a3a3","pos":{"lat":55.72355131194302,"lon":49.12785530090333,"zoom":16},"opt":{"city":"kazan"},"org":[{"id":"2956015536780124"}]});
 			noscript(style="color:#c00;font-size:16px;font-weight:bold;") Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
-
-
-			//-.map-marker
-				.map-marker__icon
-					svg.svg
-						use(xlink:href='img/svgSprite.svg#icon__pin')
-				.map-marker__title Мы находимся тут
-			//script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full")
-
 	.grid
 		.grid__row
 			.grid__col

@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока slider-side, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider-side {
+	padding: 24px 0 0;
+	@media (min-width: $screen-lg) {
+		padding: 24px 0 0 16px;
+	}
+	&_left {
+		padding: 0 0 24px !important;
+		@media (min-width: $screen-xl) {
+			padding: 24px 0 0 0;
+		}
+	}
+	&__subtitle {
+		color: #1a171a;
+		@include slider-side-sub;
+		margin-bottom: 16px;
+	}
+	&__p {
+		color: #60636f;
+		@include slider-side-p;
+		margin: 0;
+	}
+	&__button {
+		margin-top: 25px;
+		width: 233px;
+	}
+}

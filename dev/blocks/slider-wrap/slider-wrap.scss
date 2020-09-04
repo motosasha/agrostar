@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока slider-wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider-wrap {
+	position: relative;
+	&_about {
+		@media (min-width: $screen-lg) {
+			margin-bottom: 40px;
+		}
+	}
+	&_lab {
+		@media (min-width: $screen-lg) {
+			margin-bottom: 88px;
+		}
+	}
+}
