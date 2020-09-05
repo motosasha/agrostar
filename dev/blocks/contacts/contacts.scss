@@ -99,5 +99,9 @@
 		@media (min-width: $screen-xl) {
 			width: 55%;
 		}
+
+		iframe {
+			border: none !important;
+		}
 	}
 }

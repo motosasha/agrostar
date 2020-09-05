@@ -80,5 +80,21 @@
 		margin-top: auto;
 		position: absolute;
 		bottom: 26px;
+		span {
+			display: inline-block;
+			height: 8px;
+			margin: 0 0 0 8px;
+			width: 8px;
+			&::before {
+				border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+				border-style: solid;
+				border-width: 5px 0 5px 8px;
+				content: '';
+				display: block;
+				height: 0;
+				transform: translateY(-1px);
+				width: 0;
+			}
+		}
 	}
 }

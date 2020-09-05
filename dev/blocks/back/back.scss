@@ -9,6 +9,25 @@
 		@include back-link;
 		&:hover {
 			color: #2d5f9a;
+			span {
+				border-color: transparent #2d5f9a transparent transparent;
+			}
+		}
+		span {
+			display: inline-block;
+			height: 8px;
+			margin: 0 6px 0 0;
+			width: 8px;
+			&::before {
+				border-color: transparent #1e3d68 transparent transparent;
+				border-style: solid;
+				border-width: 5px 8px 5px 0;
+				content: '';
+				display: block;
+				height: 0;
+				transform: translateY(-3px);
+				width: 0;
+			}
 		}
 	}
 }
