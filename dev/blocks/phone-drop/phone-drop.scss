@@ -58,7 +58,7 @@
 		}
 	}
 	&_open &__link {
-		color: #295694;
+		color: #295694 !important;
 	}
 	&__trigger {
 		align-items: center;
@@ -73,14 +73,17 @@
 			background: rgba(255,255,255,.125);
 		}
 		svg {
-			fill: #295694;
-			@media (min-width: $screen-xl) {
-				fill: #fff;
-			}
+			fill: #fff;
+		}
+	}
+	.header_transparent &__trigger svg {
+		fill: #295694;
+		@media (min-width: $screen-xl) {
+			fill: #fff;
 		}
 	}
 	&_open &__trigger svg {
-		fill: #295694;
+		fill: #295694 !important;
 		transform: rotate(180deg);
 	}
 }

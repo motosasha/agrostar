@@ -62,7 +62,7 @@
 			padding-left: 32px;
 		}
 		&::before {
-			color: #04b270;
+			color: #4671a2;
 			content: counter(li) '.';
 			counter-increment: li;
 			display: block;
@@ -72,7 +72,7 @@
 	ul li {
 		padding-left: 18px;
 		&::before {
-			background: #04b270;
+			background: #4671a2;
 			border-radius: 50%;
 			content: '';
 			height: 6px;
