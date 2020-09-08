@@ -4,7 +4,6 @@
 
 .welcome {
 	margin: 0;
-	overflow: hidden;
 	padding: 80px 0;
 	@media (min-width: $screen-lg) {
 		height: 876px;
@@ -32,25 +31,12 @@
 		}
 		&::before {
 			background: url('/img/bg__welcome.jpg') no-repeat;
+			background-size: cover;
 			content: '';
 			display: block;
-			height: 954px;
-			transform: rotate(-30deg) translate(-440px, -100px);
-			width: 1432px;
-			@media (min-width: $screen-lg) {
-				transform: rotate(-30deg) translate(-440px, -100px);
-			}
-			@media (min-width: $screen-xl) {
-				height: 954px;
-				transform: rotate(-30deg) translate(-440px, -100px);
-				//transform: rotate(-30deg) translate(-400px, -100px);
-				width: 1432px;
-
-				//height: 1150px;
-				//transform: rotate(-30deg) translate(-440px, -100px);
-				//transform: rotate(-30deg) translate(-250px, -50px);
-				//width: 1725px;
-			}
+			height: 975px;
+			transform: rotate(-30deg) translate(-390px, -60px);
+			width: 1500px;
 		}
 	}
 	&__info {

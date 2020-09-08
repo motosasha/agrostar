@@ -12,7 +12,7 @@
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
-		padding: 26px 26px 256px;
+		padding: 26px 26px 96px;
 		position: relative;
 		text-decoration: none;
 		transition: transform .125s ease;
@@ -32,20 +32,36 @@
 			transform: scale(1.04);
 		}
 		&_calf {
-			background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -130px bottom -50px, #295694;
-			background-size: 370px 300px;
+			background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -60px bottom -60px, #295694;
+			background-size: 185px 150px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -130px bottom -50px, #295694;
+				background-size: 370px 300px;
+			}
 		}
 		&_cow {
-			background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -130px bottom -50px, #4671a2;
-			background-size: 370px 300px;
+			background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -60px bottom -60px, #4671a2;
+			background-size: 185px 150px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -130px bottom -50px, #4671a2;
+				background-size: 370px 300px;
+			}
 		}
 		&_milk {
-			background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -130px bottom -50px, #70aad4;
-			background-size: 370px 300px;
+			background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -60px bottom -60px, #70aad4;
+			background-size: 185px 150px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -130px bottom -50px, #70aad4;
+				background-size: 370px 300px;
+			}
 		}
 	}
 	&_main-page &__item {
-		min-height: 248px;
+		min-height: 168px;
+		padding: 26px;
+		@media (min-width: $screen-sm) {
+			min-height: 248px;
+		}
 	}
 	&__title {
 		color: #fff;

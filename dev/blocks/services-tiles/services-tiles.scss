@@ -16,7 +16,7 @@
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
-		padding: 26px 26px 170px;
+		padding: 26px 26px 96px;
 		position: relative;
 		text-decoration: none;
 		transition: transform .125s ease;
@@ -30,16 +30,28 @@
 			transform: scale(1.04);
 		}
 		&_audit {
-			background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -46px bottom -47px, #3a7ad3;
-			background-size: 220px 197px;
+			background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -16px bottom -16px, #3a7ad3;
+			background-size: 110px 99px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -46px bottom -47px, #3a7ad3;
+				background-size: 220px 197px;
+			}
 		}
 		&_diet {
-			background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -46px bottom -47px, #669fe0;
-			background-size: 220px 197px;
+			background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -16px bottom -16px, #669fe0;
+			background-size: 110px 99px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -46px bottom -47px, #669fe0;
+				background-size: 220px 197px;
+			}
 		}
 		&_lab {
-			background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -46px bottom -47px, #88ceff;
-			background-size: 220px 197px;
+			background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -16px bottom -16px, #88ceff;
+			background-size: 110px 99px;
+			@media (min-width: $screen-sm) {
+				background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -46px bottom -47px, #88ceff;
+				background-size: 220px 197px;
+			}
 		}
 	}
 	&__title {
