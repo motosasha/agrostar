@@ -61,6 +61,16 @@
 		padding: 26px;
 		@media (min-width: $screen-sm) {
 			min-height: 248px;
+			padding: 26px 26px 80px;
+		}
+		@media (min-width: $screen-md) {
+			padding: 26px 26px 120px;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 26px 26px 240px;
+		}
+		@media (min-width: $screen-xl) {
+			padding: 26px 26px 220px;
 		}
 	}
 	&__title {
