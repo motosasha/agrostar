@@ -21,13 +21,13 @@ html(class='no-js', lang='ru-RU')
 
 		block head
 			link(rel="stylesheet" href="/css/style.css")
-			// удалить:
-			link(rel="stylesheet" href="/css/trash.css")
+			//- удалить:
+			//-link(rel="stylesheet" href="/css/trash.css")
 
 	body
 		noscript У вас отключен JavaScript. Это пугает.
 
-		include layout__part_navigation.pug
+		//-include layout__part_navigation.pug
 		.page
 			.page__main
 				block pageMain
@@ -36,5 +36,5 @@ html(class='no-js', lang='ru-RU')
 	block templates
 	block scripts
 
-	//удалить
-	script(src="/js/service.js")
+	//-удалить
+	//-script(src="/js/service.js")
