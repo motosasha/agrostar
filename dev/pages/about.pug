@@ -5,16 +5,16 @@ block pageHeader
 		'О компании',
 		true,
 		[
-			{active: true, link: 'О нас', url: '#'},
-			{active: false, link: 'Консультационные услуги', url: '#'},
-			{active: false, link: 'О производстве', url: '#'},
-			{active: false, link: 'О лаборатории', url: '#'},
-			{active: false, link: 'Вакансии', url: '/vacancy.html'}
+			{active: false, link: 'О нас', url: '#about'},
+			{active: false, link: 'Консультационные услуги', url: '#services'},
+			{active: false, link: 'О производстве', url: '#prod'},
+			{active: false, link: 'О лаборатории', url: '#lab'},
+			{active: false, link: 'Вакансии', url: '#vacancy'}
 		]
 	)
 
 block pageMain
-	section.section
+	section.section#about
 		.grid
 			.grid__row
 				.grid__col.grid__col_xl_4
@@ -44,7 +44,7 @@ block pageMain
 								.slider__bubble
 									.slider__bubble-title Заголовок 2
 									.slider__bubble-descr Описание 2
-	section.section
+	section.section#services
 		.grid
 			.grid__row
 				.grid__col
@@ -68,7 +68,7 @@ block pageMain
 							]
 						)
 						//-p.page__p.page__p_secondary Портфель продукции включает в себя заменители молока, концентраты, премиксы и кормовые добавки для КРС, свиноводства и птицеводства. Высочайшие стандарты качества продукции и удовлетворенность клиентов являются ключевыми приоритетами компании
-	section.section
+	section.section#prod
 		.grid
 			.grid__row
 				.grid__col.grid__col_lg_7
@@ -97,7 +97,7 @@ block pageMain
 					.slider-side
 						h2.page__title.page__title_1 Производство
 						p.slider-side__p Высочайшие стандарты и строгий контроль качества на каждом этапе производства, передовой мировой опыт и собственные разработки позволяют «АгроСтар» выпускать лучшие на рынке корма и заменители молока для сельскохозяйственных животных
-	section.section
+	section.section#lab
 		.grid
 			.grid__row
 				.grid__col
@@ -128,7 +128,7 @@ block pageMain
 										ul.slider__lab-list
 											li - пункт 1
 											li - пункт 2
-	section.section
+	section.section#vacancy
 		.grid
 			.grid__row
 				.grid__col
