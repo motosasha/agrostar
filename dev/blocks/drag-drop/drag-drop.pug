@@ -3,10 +3,10 @@
 mixin drag-drop-file(filename, filesize, icon)
 	.drag-drop__item
 		svg.drag-drop__icon.svg
-			use(xlink:href='img/svgSprite.svg#icon__' + icon)
+			use(xlink:href='/img/svgSprite.svg#icon__' + icon)
 		.drag-drop__item-inner
 			.drag-drop__filename!= filename
 			.drag-drop__filesize!= filesize
 		.drag-drop__remove
 			svg.drag-drop__cross.svg
-				use(xlink:href='img/svgSprite.svg#icon__cross')
+				use(xlink:href='/img/svgSprite.svg#icon__cross')
