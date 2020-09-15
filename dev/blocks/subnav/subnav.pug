@@ -1,7 +1,7 @@
 //- Все примеси в этом файле должны начинаться c имени блока (subnav)
 
 mixin subnav(items)
-	.subnav
+	.subnav(class= isAbout ? 'subnav_about': '')
 		each item, index in items
 			if item.active === true
 				.subnav__item(class=item.active ? 'subnav__item_active': '')!= item.link

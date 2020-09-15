@@ -1,15 +1,19 @@
 extends ../pug/layout_default.pug
 
+block variables
+	- var isMainPage = false;
+	- var isAbout = true;
+
 block pageHeader
 	+header(
 		'О компании',
 		true,
 		[
-			{active: false, link: 'О нас', url: '#about'},
-			{active: false, link: 'Консультационные услуги', url: '#services'},
-			{active: false, link: 'О производстве', url: '#prod'},
-			{active: false, link: 'О лаборатории', url: '#lab'},
-			{active: false, link: 'Вакансии', url: '#vacancy'}
+			{active: false, link: 'О нас', url: '/about.html#about'},
+			{active: false, link: 'Консультационные услуги', url: '/about.html#services'},
+			{active: false, link: 'О производстве', url: '/about.html#prod'},
+			{active: false, link: 'О лаборатории', url: '/about.html#lab'},
+			{active: false, link: 'Вакансии', url: '/about.html#vacancy'}
 		]
 	)
 

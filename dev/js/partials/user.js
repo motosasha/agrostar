@@ -141,7 +141,7 @@ $(document).ready(function() {
 		slidesToScroll: 1
 	});
 
-	$('a.subnav__item').on('click', function(event) {
+	$('.subnav_about a.subnav__item').on('click', function(event) {
 		if (this.hash !== "") {
 			event.preventDefault();
 			let hash = this.hash;
