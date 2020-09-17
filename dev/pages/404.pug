@@ -1,0 +1,14 @@
+extends ../pug/layout_default.pug
+
+block pageHeader
+	+header(
+		'Страницы не существует',
+		false
+	)
+
+block pageMain
+	.grid
+		.grid__row
+			.grid__col
+				h2.page__title.page__title_1 Ошибка 404
+				p.page__p Запрашиваемая вами страница не существует. Проверьте правильность написания адреса или перейдите на <a href='/' class='link'>главную страницу</a>.
