@@ -75,8 +75,8 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		speed: 500,
 		touchThreshold: 15,
-		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
 	});
 
 	$('.slider_production').slick({
@@ -88,8 +88,8 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		speed: 500,
 		touchThreshold: 15,
-		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
 	});
 	$('.slider_production_mini').slick({
 		arrows: false,
@@ -108,8 +108,8 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		speed: 500,
 		touchThreshold: 15,
-		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
 	});
 	$('.slider_about_mini').slick({
 		adaptiveHeight: true,
@@ -129,8 +129,8 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		speed: 500,
 		touchThreshold: 15,
-		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
 	});
 	$('.slider_lab_mini').slick({
 		adaptiveHeight: true,
@@ -141,7 +141,7 @@ $(document).ready(function() {
 		slidesToScroll: 1
 	});
 
-	$("a").on('click', function(event) {
+	$('.subnav_about a.subnav__item').on('click', function(event) {
 		if (this.hash !== "") {
 			event.preventDefault();
 			let hash = this.hash;

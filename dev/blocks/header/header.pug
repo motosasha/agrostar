@@ -11,23 +11,23 @@ mixin header(title, isSub, sub)
 						if isMainPage === true
 							.header__logo
 								svg.svg
-									use(xlink:href='img/svgSprite.svg#logo_as')
+									use(xlink:href='/img/svgSprite.svg#logo_as')
 						else
 							a.header__logo(href='/')
 								svg.svg
-									use(xlink:href='img/svgSprite.svg#logo_as')
+									use(xlink:href='/img/svgSprite.svg#logo_as')
 						a.header__call(href='tel:88432788654')
 							svg.header__icon.svg
-								use(xlink:href='img/svgSprite.svg#icon__phone')
+								use(xlink:href='/img/svgSprite.svg#icon__phone')
 					.header__inner
 						if isMainPage === true
 							.header__logo
 								svg.svg
-									use(xlink:href='img/svgSprite.svg#logo_as')
+									use(xlink:href='/img/svgSprite.svg#logo_as')
 						else
 							a.header__logo(href='/')
 								svg.svg
-									use(xlink:href='img/svgSprite.svg#logo_as')
+									use(xlink:href='/img/svgSprite.svg#logo_as')
 						.header__nav
 							+nav
 						.header__drop
