@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	padding: 40px 0 0;
+	&__item {
+		flex: 0 0 auto;
+		margin: 0 2px;
+		@media (min-width: $screen-sm) {
+			margin: 0 8px;
+		}
+	}
+	&__link,
+	&__span {
+		align-items: center;
+		border-radius: 4px;
+		box-shadow: 0 8px 16px #dfe9eb;
+		color: $typography-primary;
+		display: flex;
+		font-size: 14px;
+		font-weight: 700;
+		justify-content: center;
+		height: 32px;
+		letter-spacing: .25px;
+		line-height: 16px;
+		text-align: center;
+		text-decoration: none;
+		transition: background .25s ease;
+		width: 32px;
+		@media (min-width: $screen-sm) {
+			border-radius: 8px;
+			font-size: 16px;
+			height: 40px;
+			width: 40px;
+		}
+	}
+	&__link:hover {
+		background: $color-white;
+	}
+	&__span:hover {
+		cursor: default;
+	}
+	&__link_active {
+		background: #4671a2;
+		color: $typography-inverse;
+		cursor: default;
+		&:hover {
+			background: #4671a2;
+			color: $typography-inverse;
+		}
+	}
+}

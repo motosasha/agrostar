@@ -14,29 +14,21 @@
 		position: relative;
 	}
 	&__img {
-		border-radius: 210px;
 		display: none;
-		height: 954px;
-		left: 65%;
-		overflow: hidden;
+		left: 50%;
+		height: 975px;
+		mask-image: url(/img/img__welcome-mask.svg);
+-webkit-mask-image: url(/img/img__welcome-mask.svg);
+		object-fit: cover;
 		position: absolute;
-		top: -280px;
-		transform: rotate(30deg);
-		width: 954px;
+		top: 0;
+		transform: translate(45px, -200px);
+		width: 1151px;
 		@media (min-width: $screen-lg) {
 			display: block;
 		}
 		@media (min-width: $screen-xl) {
-			left: 50%;
-		}
-		&::before {
-			background: url('/img/bg__welcome.jpg') no-repeat;
-			background-size: cover;
-			content: '';
-			display: block;
-			height: 975px;
-			transform: rotate(-30deg) translate(-390px, -60px);
-			width: 1500px;
+			transform: translate(-100px, -200px);
 		}
 	}
 	&__info {

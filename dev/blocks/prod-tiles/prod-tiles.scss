@@ -12,6 +12,7 @@
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		padding: 26px 26px 96px;
 		position: relative;
 		text-decoration: none;
@@ -31,29 +32,14 @@
 		&:hover {
 			transform: scale(1.04);
 		}
-		&_calf {
-			background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -60px bottom -60px, #295694;
-			background-size: 185px 150px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__calf-view) no-repeat right -130px bottom -50px, #295694;
-				background-size: 370px 300px;
-			}
+		&_dark {
+			background: #295694;
 		}
-		&_cow {
-			background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -60px bottom -60px, #4671a2;
-			background-size: 185px 150px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__cow-view) no-repeat right -130px bottom -50px, #4671a2;
-				background-size: 370px 300px;
-			}
+		&_middle {
+			background: #4671a2;
 		}
-		&_milk {
-			background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -60px bottom -60px, #70aad4;
-			background-size: 185px 150px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__milk-view) no-repeat right -130px bottom -50px, #70aad4;
-				background-size: 370px 300px;
-			}
+		&_light {
+			background: #70aad4;
 		}
 	}
 	&_main-page &__item {
@@ -121,6 +107,24 @@
 				transform: translateY(-1px);
 				width: 0;
 			}
+		}
+	}
+	&__img {
+		bottom: 0;
+		height: 150px;
+		position: absolute;
+		right: 0;
+		transform: translate(60px, 60px);
+		width: 185px;
+		@media (min-width: $screen-sm) {
+			height: 300px;
+			transform: translate(130px, 50px);
+			width: 370px;
+		}
+		svg {
+			fill: #fff;
+			height: 100%;
+			width: 100%;
 		}
 	}
 }

@@ -7,3 +7,6 @@ mixin services-tiles(items)
 				.services-tiles__title!= item.title
 				.services-tiles__link Подробнее
 					span
+				.services-tiles__img
+					svg.svg
+						use(xlink:href='/img/svgSprite.svg#img__' + item.img)

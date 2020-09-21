@@ -11,7 +11,7 @@ block pageMain
 		.grid.welcome__inner
 			.grid__row
 				.grid__col
-					.welcome__img
+					img.welcome__img(src='/img/bg__welcome.jpg' alt='')
 					.welcome__info
 						h1.welcome__title Продажа кормов для сельскохоз животных
 						.welcome__descr Наши продукты позволяют оптимальным образом сбалансировать рацион, по питательным веществам, энергии и микроэлементам.
@@ -23,19 +23,22 @@ block pageMain
 					+prod-tiles(
 						[
 							{
-								class: 'milk',
+								class: 'light',
 								title: 'Для повышения удоев',
 								isDescr: false,
+								img: 'milk',
 							},
 							{
-								class: 'cow',
+								class: 'middle',
 								title: 'Корма для здоровья коров',
 								isDescr: false,
+								img: 'cow',
 							},
 							{
-								class: 'calf',
+								class: 'dark',
 								title: 'Корма для выращивания телят',
 								isDescr: false,
+								img: 'calf',
 							},
 						]
 					)
@@ -49,16 +52,19 @@ block pageMain
 						+services-tiles(
 							[
 								{
-									class: 'audit',
+									class: 'dark',
 									title: 'Аудит хозяйств',
+									img: 'audit'
 								},
 								{
-									class: 'diet',
+									class: 'middle',
 									title: 'Расчет рациона',
+									img: 'diet'
 								},
 								{
-									class: 'lab',
+									class: 'light',
 									title: 'Лабораторные исследования',
+									img: 'lab'
 								}
 							]
 						)

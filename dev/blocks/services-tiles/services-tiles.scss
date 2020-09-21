@@ -16,6 +16,7 @@
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		padding: 26px 26px 96px;
 		position: relative;
 		text-decoration: none;
@@ -29,29 +30,14 @@
 		&:hover {
 			transform: scale(1.04);
 		}
-		&_audit {
-			background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -16px bottom -16px, #3a7ad3;
-			background-size: 110px 99px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__audit-view) no-repeat right -46px bottom -47px, #3a7ad3;
-				background-size: 220px 197px;
-			}
+		&_dark {
+			background: #3a7ad3;
 		}
-		&_diet {
-			background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -16px bottom -16px, #669fe0;
-			background-size: 110px 99px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__diet-view) no-repeat right -46px bottom -47px, #669fe0;
-				background-size: 220px 197px;
-			}
+		&_middle {
+			background: #669fe0;
 		}
-		&_lab {
-			background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -16px bottom -16px, #88ceff;
-			background-size: 110px 99px;
-			@media (min-width: $screen-sm) {
-				background: url(/img/svgSprite.svg#img__lab-view) no-repeat right -46px bottom -47px, #88ceff;
-				background-size: 220px 197px;
-			}
+		&_light {
+			background: #88ceff;
 		}
 	}
 	&__title {
@@ -102,6 +88,24 @@
 				transform: translateY(-1px);
 				width: 0;
 			}
+		}
+	}
+	&__img {
+		bottom: 0;
+		height: 99px;
+		position: absolute;
+		right: 0;
+		transform: translate(16px, 16px);
+		width: 110px;
+		@media (min-width: $screen-sm) {
+			height: 197px;
+			transform: translate(46px, 47px);
+			width: 220px;
+		}
+		svg {
+			fill: #fff;
+			height: 100%;
+			width: 100%;
 		}
 	}
 }
