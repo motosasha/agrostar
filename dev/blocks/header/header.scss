@@ -3,19 +3,8 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
-	background: #4671a2;
-	border-radius: 0 0 64px 0;
 	position: relative;
 	z-index: 2;
-	@media (min-width: $screen-md) {
-		border-radius: 0 0 100px 0;
-	}
-	&_transparent {
-		background: transparent;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
 	&__inner {
 		display: none;
 		padding: 24px 0;
@@ -43,12 +32,6 @@
 			}
 		}
 	}
-	&__block {
-		padding: 16px 0 0;
-		@media (min-width: $screen-md) {
-			padding: 48px 0 0;
-		}
-	}
 	&__logo {
 		grid-area: logo;
 		flex: 0 0 auto;
@@ -60,7 +43,7 @@
 			width: 161px;
 		}
 	}
-	&_transparent &__logo svg {
+	.page__header_mp &__logo svg {
 		fill: #323441;
 	}
 	&__menu {
@@ -100,7 +83,7 @@
 			transform: translateY(-5px) rotate(0);
 		}
 	}
-	&_transparent &__menu-icon {
+	.page__header_mp &__menu-icon {
 		background: #323441;
 		&::after,
 		&::before {
@@ -120,20 +103,8 @@
 		height: 24px;
 		width: 24px;
 	}
-	&_transparent &__icon {
+	.page__header_mp &__icon {
 		fill: #323441;
-	}
-	&__heading {
-		color: #f8fafd;
-		@include header-heading;
-		margin: 8px 0 40px;
-	}
-	&__subnav {
-		margin-top: -16px;
-		padding-bottom: 8px;
-		@media (min-width: $screen-xl) {
-			padding: 0;
-		}
 	}
 	&__nav {
 		grid-area: nav;

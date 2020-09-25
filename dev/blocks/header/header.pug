@@ -1,7 +1,7 @@
 //- Все примеси в этом файле должны начинаться c имени блока (header)
 
-mixin header(title, isSub, sub)
-	.header(class=isMainPage ? 'header_transparent': '')
+mixin header(title)
+	.header
 		.grid
 			.grid__row
 				.grid__col
@@ -33,13 +33,3 @@ mixin header(title, isSub, sub)
 						.header__drop
 							+phone-drop
 						a.header__button.button.js-popup(href='#popup-call') Написать нам
-			if isMainPage === false
-				.grid__row
-					.grid__col
-						.header__block
-							.breadcrumbs
-								a.breadcrumbs__item(href='/') Главная
-							h1.header__heading!= title
-							if isSub === true
-								.header__subnav
-									+subnav(sub)

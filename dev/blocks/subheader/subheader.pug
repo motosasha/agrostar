@@ -1,0 +1,14 @@
+//- Все примеси в этом файле должны начинаться c имени блока (subheader)
+
+mixin subheader(title, isSub, sub)
+	section.subheader
+		.grid
+			.grid__row
+				.grid__col
+					.subheader__block
+						.breadcrumbs
+							a.breadcrumbs__item(href='/') Главная
+						h1.subheader__heading!= title
+						if isSub === true
+							.subheader__subnav
+								+subnav(sub)

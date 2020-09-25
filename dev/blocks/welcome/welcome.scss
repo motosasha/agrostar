@@ -4,11 +4,14 @@
 
 .welcome {
 	margin: 0;
-	padding: 80px 0;
+	padding: 120px 0 40px;
+	@media (min-width: $screen-md) {
+		padding: 200px 0 0px;
+	}
 	@media (min-width: $screen-lg) {
 		height: 876px;
 		margin: -64px 0 -200px;
-		padding: 194px 0 0;
+		padding: 260px 0 0;
 	}
 	&__inner {
 		position: relative;

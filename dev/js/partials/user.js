@@ -152,4 +152,33 @@ $(document).ready(function() {
 			});
 		}
 	});
+
+	let cbpAnimatedHeader = (function() {
+		let docElem = document.documentElement,
+			header = document.querySelector( '.page__header' ),
+			didScroll = false,
+			changeHeaderOn = 200;
+		function init() {
+			window.addEventListener( 'scroll', function( event ) {
+				if( !didScroll ) {
+					didScroll = true;
+					setTimeout( scrollPage, 250 );
+				}
+			}, false );
+		}
+		function scrollPage() {
+			let sy = scrollY();
+			if ( sy >= changeHeaderOn ) {
+				header.classList.add('page__header_bg');
+			}
+			else {
+				header.classList.remove('page__header_bg');
+			}
+			didScroll = false;
+		}
+		function scrollY() {
+			return window.pageYOffset || docElem.scrollTop;
+		}
+		init();
+	})();
 });

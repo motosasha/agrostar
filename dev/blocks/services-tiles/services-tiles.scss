@@ -5,7 +5,9 @@
 .services-tiles {
 	display: grid;
 	grid-gap: 16px;
-	padding: 40px 0 0;
+	.page__p + & {
+		margin-top: 40px;
+	}
 	@media (min-width: $screen-md) {
 		grid-template-columns: 1fr 1fr;
 	}

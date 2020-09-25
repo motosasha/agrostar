@@ -3,6 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .contacts {
+	padding-top: 48px;
 	position: relative;
 	@media (min-width: $screen-lg) {
 		height: 480px;
@@ -71,7 +72,7 @@
 
 	&__map {
 		height: 320px;
-		margin: 32px 0;
+		margin: 48px 0;
 		position: relative;
 		width: 100%;
 		@media (min-width: $screen-sm) {

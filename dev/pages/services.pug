@@ -1,7 +1,10 @@
 extends ../pug/layout_default.pug
 
 block pageHeader
-	+header(
+	+header('Услуги')
+
+block pageMain
+	+subheader(
 		'Услуги',
 		true,
 		[
@@ -12,27 +15,26 @@ block pageHeader
 			{active: false, link: 'Вакансии', url: '/about.html#vacancy'}
 		]
 	)
-
-block pageMain
-	.grid
-		.grid__row
-			.grid__col
-				+services-tiles(
-					[
-						{
-							class: 'dark',
-							title: 'Аудит хозяйств',
-							img: 'audit'
-						},
-						{
-							class: 'middle',
-							title: 'Расчет рациона',
-							img: 'diet'
-						},
-						{
-							class: 'light',
-							title: 'Лабораторные исследования',
-							img: 'lab'
-						}
-					]
-				)
+	section.section.section_pb
+		.grid
+			.grid__row
+				.grid__col
+					+services-tiles(
+						[
+							{
+								class: 'dark',
+								title: 'Аудит хозяйств',
+								img: 'audit'
+							},
+							{
+								class: 'middle',
+								title: 'Расчет рациона',
+								img: 'diet'
+							},
+							{
+								class: 'light',
+								title: 'Лабораторные исследования',
+								img: 'lab'
+							}
+						]
+					)

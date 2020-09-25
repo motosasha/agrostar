@@ -3,10 +3,35 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .section {
-	& + & {
-		padding: 48px 0 0;
+	padding: 48px 0 0;
+	position: relative;
+	@media (min-width: $screen-md) {
+		padding: 92px 0 0;
+	}
+	&_pb {
+		padding: 48px 0;
 		@media (min-width: $screen-md) {
-			padding: 92px 0 0;
+			padding: 92px 0;
+		}
+	}
+	&_contacts {
+		padding: 0 0 48px;
+		@media (min-width: $screen-md) {
+			padding: 0 0 92px;
+		}
+	}
+	&__anchor {
+		background: #000;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		top: -64px;
+		width: 10px;
+		@media (min-width: $screen-md) {
+			top: -96px;
+		}
+		@media (min-width: $screen-xl) {
+			top: -48px;
 		}
 	}
 }

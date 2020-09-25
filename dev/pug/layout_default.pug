@@ -56,7 +56,7 @@ html(class='no-js', lang='ru-RU')
 		.page
 			.page__nav
 				include layout__part_nav.pug
-			.page__header
+			.page__header(class=isMainPage ? 'page__header_mp': '')
 				block pageHeader
 			.page__main
 				block pageMain
