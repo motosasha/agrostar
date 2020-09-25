@@ -1,0 +1,38 @@
+extends ../pug/layout_default.pug
+
+block pageHeader
+	+header(
+		'Услуги',
+		true,
+		[
+			{active: false, link: 'О нас', url: '/about.html#about'},
+			{active: false, link: 'Консультационные услуги', url: '/about.html#services'},
+			{active: false, link: 'О производстве', url: '/about.html#prod'},
+			{active: false, link: 'О лаборатории', url: '/about.html#lab'},
+			{active: false, link: 'Вакансии', url: '/about.html#vacancy'}
+		]
+	)
+
+block pageMain
+	.grid
+		.grid__row
+			.grid__col
+				+services-tiles(
+					[
+						{
+							class: 'dark',
+							title: 'Аудит хозяйств',
+							img: 'audit'
+						},
+						{
+							class: 'middle',
+							title: 'Расчет рациона',
+							img: 'diet'
+						},
+						{
+							class: 'light',
+							title: 'Лабораторные исследования',
+							img: 'lab'
+						}
+					]
+				)
