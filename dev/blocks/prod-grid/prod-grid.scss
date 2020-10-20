@@ -29,11 +29,11 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		max-height: 320px;
+		height: 320px;
 		overflow: hidden;
 		width: 100%;
 		img {
-			height: 400px;
+			max-height: 500px;
 			max-width: 100%;
 		}
 	}
