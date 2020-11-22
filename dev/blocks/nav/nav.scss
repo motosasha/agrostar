@@ -4,26 +4,94 @@
 
 .nav {
 	display: flex;
+	height: 19px;
 	&_sidenav {
 		display: grid;
 		grid-gap: 24px;
 	}
-	&__item {
-		color: #fff;
-		@include header-nav;
-		transition: color .25s ease;
-		&:hover {
-			color: rgba(255,255,255,.5);
+	&__inner {
+		@media (min-width: $screen-md) {
+			display: none;
+			padding-top: 8px;
+			.nav__item:hover & {
+				display: block;
+			}
 		}
+	}
+	&__drop {
+		display: grid;
+		grid-gap: 24px;
+		@media (min-width: $screen-md) {
+			background: #fff;
+			box-shadow: 0 9px 21px rgba(0,0,0,.125);
+			border-radius: 8px;
+			display: grid;
+			grid-gap: 12px;
+			left: -16px;
+			padding: 12px 16px;
+			position: absolute;
+		}
+	}
+	&__item {
+		position: relative;
 		& + & {
 			margin-left: 26px;
 		}
 	}
-	.page__header_mp &__item {
-		color: #323441;
+	&__inner &__item + &__item {
+		margin-left: 0;
 	}
-
 	&_sidenav &__item {
 		margin-left: 0;
+	}
+	& > &__item:first-of-type > &__link {
+		cursor: default;
+	}
+	&_sidenav > &__item:first-of-type > &__link {
+		display: none;
+	}
+	&__link {
+		align-items: center;
+		color: #fff;
+		display: flex;
+		@include header-nav;
+		transition: opacity .25s ease;
+		white-space: nowrap;
+		&:hover {
+			opacity: .64;
+		}
+	}
+	&__drop &__link {
+		@media (min-width: $screen-md) {
+			color: #323441;
+		}
+	}
+	.page__header_mp &__link {
+		color: #323441;
+	}
+	&__trigger {
+		align-items: center;
+		border-radius: 2px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		height: 19px;
+		margin: 0 0 0 4px;
+		width: 16px;
+	}
+	&__icon {
+		fill: #fff;
+		height: 16px;
+		width: 16px;
+		.page__header_mp & {
+			fill: #1e3d68;
+		}
+	}
+
+	@media (hover: none) and (pointer: coarse) {
+
+	}
+	@media (hover: hover) and (pointer: fine) {
+
 	}
 }

@@ -29,10 +29,6 @@
 	&__main {
 		flex: 1 0 auto;
 		overflow: hidden;
-		//padding: 0 0 40px;
-		@media (min-width: $screen-md) {
-			//padding: 0 0 64px;
-		}
 	}
 	&__footer {
 		bottom: 0;

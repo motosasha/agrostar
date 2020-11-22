@@ -134,9 +134,9 @@
 							<div class="grid__col">
 								<div class="subheader__block">
 									<div class="breadcrumbs"><a class="breadcrumbs__item" href="/">Главная</a></div>
-									<h1 class="subheader__heading">Услуги</h1>
+									<h1 class="subheader__heading">Расчет рациона</h1>
 									<div class="subheader__subnav">
-										<div class="subnav"><a class="subnav__item" href="/about.html#about">О нас</a><a class="subnav__item" href="/about.html#services">Консультационные услуги</a><a class="subnav__item" href="/about.html#prod">О производстве</a><a class="subnav__item" href="/about.html#lab">О лаборатории</a><a class="subnav__item" href="/about.html#vacancy">Вакансии</a></div>
+										<div class="subnav"><a class="subnav__item" href="/audit.html">Аудит хозяйств</a><a class="subnav__item" href="/diet.html">Расчет рациона</a><a class="subnav__item" href="/lab.html">Лабораторные исследования</a></div>
 									</div>
 								</div>
 							</div>
@@ -147,29 +147,49 @@
 					<div class="grid">
 						<div class="grid__row">
 							<div class="grid__col">
-								<div class="services-tiles"><a class="services-tiles__item services-tiles__item_dark" href="audit.html">
-										<div class="services-tiles__title">Аудит хозяйств</div>
-										<div class="services-tiles__link">Подробнее<span></span></div>
-										<div class="services-tiles__img"><svg class="svg">
-												<use xlink:href="/img/svgSprite.svg#img__audit"></use>
-											</svg></div>
-									</a><a class="services-tiles__item services-tiles__item_middle" href="diet.html">
-										<div class="services-tiles__title">Расчет рациона</div>
-										<div class="services-tiles__link">Подробнее<span></span></div>
-										<div class="services-tiles__img"><svg class="svg">
-												<use xlink:href="/img/svgSprite.svg#img__diet"></use>
-											</svg></div>
-									</a><a class="services-tiles__item services-tiles__item_light" href="lab.html">
-										<div class="services-tiles__title">Лабораторные исследования</div>
-										<div class="services-tiles__link">Подробнее<span></span></div>
-										<div class="services-tiles__img"><svg class="svg">
-												<use xlink:href="/img/svgSprite.svg#img__lab"></use>
-											</svg></div>
-									</a></div>
+								<p class="page__p">Расчет рационов на программном комплексе, разработанном Корнельским университетом, позволяет с высокой точностью балансировать рацион на нужную продуктивность и качество молока, с учетом здоровья и репродуктивных функций животного.</p><a class="page__button button js-popup" href="#popup-diet">Заказать расчёт рациона</a>
 							</div>
 						</div>
 					</div>
 				</section>
+				<div class="popup zoom-anim-dialog mfp-hide" id="popup-diet">
+					<div class="popup__inner">
+						<div class="popup__close mfp-close"><svg class="popup__icon svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></div>
+						<div class="popup__title">Заказать расчёт рациона</div>
+						<form class="form popup__form" id="upload">
+							<div class="form__grid">
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваше имя:</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Номер телефона:</div><input class="field__input input" required="required" type="tel" id="phone-mask" placeholder="+7" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш email:</div><input class="field__input input" required="required" type="email" id="mail-mask" placeholder="Укажите ваш email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш комментарий:</div><textarea class="field__textarea textarea" placeholder="Напишите что-нибудь"></textarea>
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+							</div><label class="checkbox"><input class="checkbox__input" type="checkbox" checked="checked" />
+								<div class="checkbox__fake-input">
+									<div class="checkbox__mark"></div>
+								</div>
+								<div class="checkbox__label">Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</div>
+							</label>
+							<div class="form__error">Ошибка формы</div><button class="form__button button">Отправить</button>
+						</form>
+					</div>
+				</div>
 			</div>
 			<div class="page__footer">
 				<div class="footer">

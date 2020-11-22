@@ -2,7 +2,26 @@
 
 mixin nav(isSide)
 	.nav(class= isSide ? 'nav_sidenav' : '')
-		a.nav__item(href='/about.html') О компании
-		a.nav__item(href='/production.html') Продукция
-		a.nav__item(href='/services.html') Услуги
-		a.nav__item(href='/contacts.html') Контакты
+		.nav__item
+			.nav__link О компании
+				.nav__trigger
+					svg.nav__icon.svg
+						use(xlink:href='/img/svgSprite.svg#icon__triangle')
+			.nav__inner
+				.nav__drop
+					.nav__item
+						a.nav__link(href='/about.html') О нас
+					.nav__item
+						a.nav__link(href='/services.html') Услуги
+					.nav__item
+						a.nav__link(href='/production.html') О производстве
+					.nav__item
+						a.nav__link(href='/lab.html') О лаборатории
+					.nav__item
+						a.nav__link(href='/vacancy.html') Вакансии
+		.nav__item
+			a.nav__link(href='/production.html') Продукция
+		.nav__item
+			a.nav__link(href='/services.html') Услуги
+		.nav__item
+			a.nav__link(href='/contacts.html') Контакты

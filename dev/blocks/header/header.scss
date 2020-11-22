@@ -3,8 +3,12 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
+	background: #4671a2;
 	position: relative;
 	z-index: 2;
+	.page__header_mp & {
+		background: transparent;
+	}
 	&__inner {
 		display: none;
 		padding: 24px 0;
