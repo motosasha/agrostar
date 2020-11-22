@@ -4,7 +4,9 @@
 
 .nav {
 	display: flex;
-	height: 19px;
+	@media (min-width: $screen-md) {
+		height: 19px;
+	}
 	&_sidenav {
 		display: grid;
 		grid-gap: 24px;
