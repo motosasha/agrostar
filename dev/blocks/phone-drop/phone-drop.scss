@@ -53,9 +53,6 @@
 	}
 	.page__header_mp &__link {
 		color: #295694;
-		@media (min-width: $screen-xl) {
-			color: #fff;
-		}
 	}
 	.page__header_bg.page__header_mp &__link {
 		color: #295694 !important;
@@ -81,9 +78,6 @@
 	}
 	.page__header_mp &__trigger svg {
 		fill: #295694;
-		@media (min-width: $screen-xl) {
-			fill: #fff;
-		}
 	}
 	.page__header_bg.page__header_mp &__trigger svg {
 		fill: #295694 !important;
