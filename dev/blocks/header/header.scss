@@ -20,7 +20,7 @@
 		}
 		@media (min-width: $screen-xl) {
 			grid-gap: 60px;
-			grid-template-columns: 161px auto 208px 175px;
+			grid-template-columns: 88px auto 208px 175px;
 			grid-template-areas:
 					'logo nav drop button';
 		}
@@ -35,12 +35,16 @@
 	&__logo {
 		grid-area: logo;
 		flex: 0 0 auto;
-		height: 32px;
-		width: 161px;
+		height: 48px;
+		width: 88px;
 		svg {
 			fill: #ffffff;
-			height: 32px;
-			width: 161px;
+			height: 100%;
+			margin: -8px 0;
+			width: 100%;
+			@media (min-width: $screen-md) {
+				margin: 0;
+			}
 		}
 	}
 	.page__header_mp &__logo svg {
