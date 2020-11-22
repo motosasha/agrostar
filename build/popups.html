@@ -21,6 +21,9 @@
 								<div class="trash__item"><a class="js-popup" href="#popup-vacancy">Отправить резюме</a></div>
 								<div class="trash__item"><a class="js-popup" href="#popup-call">Заказать звонок</a></div>
 								<div class="trash__item"><a class="js-popup" href="#popup-price">Узнать цену</a></div>
+								<div class="trash__item"><a class="js-popup" href="#popup-audit">Заказать аудит</a></div>
+								<div class="trash__item"><a class="js-popup" href="#popup-diet">Заказать расчёт рациона</a></div>
+								<div class="trash__item"><a class="js-popup" href="#popup-lab">Заказать анализ</a></div>
 							</div>
 						</div>
 					</div>
@@ -165,6 +168,120 @@
 								<div class="checkbox__label">Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</div>
 							</label>
 							<div class="form__error">Ошибка формы</div><button class="form__button button">Оформить товар</button>
+						</form>
+					</div>
+				</div>
+				<div class="popup zoom-anim-dialog mfp-hide" id="popup-audit">
+					<div class="popup__inner">
+						<div class="popup__close mfp-close"><svg class="popup__icon svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></div>
+						<div class="popup__title">Заказать аудит</div>
+						<form class="form popup__form" id="upload">
+							<div class="form__grid">
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваше имя:</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Номер телефона:</div><input class="field__input input" required="required" type="tel" id="phone-mask" placeholder="+7" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш email:</div><input class="field__input input" required="required" type="email" id="mail-mask" placeholder="Укажите ваш email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш комментарий:</div><textarea class="field__textarea textarea" placeholder="Напишите что-нибудь"></textarea>
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+							</div><label class="checkbox"><input class="checkbox__input" type="checkbox" checked="checked" />
+								<div class="checkbox__fake-input">
+									<div class="checkbox__mark"></div>
+								</div>
+								<div class="checkbox__label">Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</div>
+							</label>
+							<div class="form__error">Ошибка формы</div><button class="form__button button">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="popup zoom-anim-dialog mfp-hide" id="popup-diet">
+					<div class="popup__inner">
+						<div class="popup__close mfp-close"><svg class="popup__icon svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></div>
+						<div class="popup__title">Заказать расчёт рациона</div>
+						<form class="form popup__form" id="upload">
+							<div class="form__grid">
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваше имя:</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Номер телефона:</div><input class="field__input input" required="required" type="tel" id="phone-mask" placeholder="+7" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш email:</div><input class="field__input input" required="required" type="email" id="mail-mask" placeholder="Укажите ваш email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш комментарий:</div><textarea class="field__textarea textarea" placeholder="Напишите что-нибудь"></textarea>
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+							</div><label class="checkbox"><input class="checkbox__input" type="checkbox" checked="checked" />
+								<div class="checkbox__fake-input">
+									<div class="checkbox__mark"></div>
+								</div>
+								<div class="checkbox__label">Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</div>
+							</label>
+							<div class="form__error">Ошибка формы</div><button class="form__button button">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="popup zoom-anim-dialog mfp-hide" id="popup-lab">
+					<div class="popup__inner">
+						<div class="popup__close mfp-close"><svg class="popup__icon svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></div>
+						<div class="popup__title">Заказать анализ</div>
+						<form class="form popup__form" id="upload">
+							<div class="form__grid">
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваше имя:</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Номер телефона:</div><input class="field__input input" required="required" type="tel" id="phone-mask" placeholder="+7" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш email:</div><input class="field__input input" required="required" type="email" id="mail-mask" placeholder="Укажите ваш email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" value="" />
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+								<div class="field form__field"><label class="field__inner">
+										<div class="field__label">Ваш комментарий:</div><textarea class="field__textarea textarea" placeholder="Напишите что-нибудь"></textarea>
+									</label>
+									<div class="field__info">Текст ошибки</div>
+								</div>
+							</div><label class="checkbox"><input class="checkbox__input" type="checkbox" checked="checked" />
+								<div class="checkbox__fake-input">
+									<div class="checkbox__mark"></div>
+								</div>
+								<div class="checkbox__label">Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</div>
+							</label>
+							<div class="form__error">Ошибка формы</div><button class="form__button button">Отправить</button>
 						</form>
 					</div>
 				</div>

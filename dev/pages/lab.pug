@@ -1,0 +1,30 @@
+extends ../pug/layout_default.pug
+
+block variables
+	- var isMainPage = false;
+	- var isAbout = false;
+
+block pageHeader
+	+header('Лабораторные исследования')
+
+block pageMain
+	+subheader(
+		'Лабораторные исследования',
+		true,
+		[
+			{active: false, link: 'Аудит хозяйств', url: '/audit.html'},
+			{active: false, link: 'Расчет рациона', url: '/diet.html'},
+			{active: false, link: 'Лабораторные исследования', url: '/lab.html'}
+		]
+	)
+	section.section.section_pb
+		.grid
+			.grid__row
+				.grid__col
+					p.page__p Критически важным для эффективной работы животноводческих комплексов является контроль качества и понимание изменчивости качества при хранении кормов. Используя аналитические возможности нашей лаборатории, оснащенной современным оборудованием и высококлассными специалистами, мы предоставляем возможность отслеживать в динамике качественные показатели кормовых составляющих рациона.
+						br
+						br
+						| Совместная работа с Dairyland Laboratories позволяет нам предоставлять услуги по анализу кормов оперативно на высоком уровне с максимальной точностью и достоверностью
+					a.page__button.button.js-popup(href='#popup-lab') Заказать анализ
+
+	+popup-lab

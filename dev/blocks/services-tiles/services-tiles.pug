@@ -3,7 +3,7 @@
 mixin services-tiles(items)
 	.services-tiles
 		each item, index in items
-			a.services-tiles__item(class='services-tiles__item_' + item.class, href='#')
+			a.services-tiles__item(class='services-tiles__item_' + item.class, href= item.href + '.html')
 				.services-tiles__title!= item.title
 				.services-tiles__link Подробнее
 					span

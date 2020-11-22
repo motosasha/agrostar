@@ -14,10 +14,20 @@ block pageMain
 						a.js-popup(href='#popup-call') Заказать звонок
 					.trash__item
 						a.js-popup(href='#popup-price') Узнать цену
+					.trash__item
+						a.js-popup(href='#popup-audit') Заказать аудит
+					.trash__item
+						a.js-popup(href='#popup-diet') Заказать расчёт рациона
+					.trash__item
+						a.js-popup(href='#popup-lab') Заказать анализ
 
 	+popup-vacancy
 	+popup-call
 	+popup-price
+
+	+popup-audit
+	+popup-diet
+	+popup-lab
 
 block templates
 	template(id='drag-drop-file-tpl')

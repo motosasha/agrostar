@@ -36,11 +36,11 @@
 		grid-area: logo;
 		flex: 0 0 auto;
 		height: 48px;
+		margin: -8px 0;
 		width: 88px;
 		svg {
 			fill: #ffffff;
 			height: 100%;
-			margin: -8px 0;
 			width: 100%;
 			@media (min-width: $screen-md) {
 				margin: 0;

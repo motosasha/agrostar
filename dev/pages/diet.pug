@@ -1,0 +1,27 @@
+extends ../pug/layout_default.pug
+
+block variables
+	- var isMainPage = false;
+	- var isAbout = false;
+
+block pageHeader
+	+header('Расчет рациона')
+
+block pageMain
+	+subheader(
+		'Расчет рациона',
+		true,
+		[
+			{active: false, link: 'Аудит хозяйств', url: '/audit.html'},
+			{active: false, link: 'Расчет рациона', url: '/diet.html'},
+			{active: false, link: 'Лабораторные исследования', url: '/lab.html'}
+		]
+	)
+	section.section.section_pb
+		.grid
+			.grid__row
+				.grid__col
+					p.page__p Расчет рационов на программном комплексе, разработанном Корнельским университетом, позволяет с высокой точностью балансировать рацион на нужную продуктивность и качество молока, с учетом здоровья и репродуктивных функций животного.
+					a.page__button.button.js-popup(href='#popup-diet') Заказать расчёт рациона
+
+	+popup-diet

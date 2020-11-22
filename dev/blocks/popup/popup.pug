@@ -70,3 +70,55 @@ mixin popup-price()
 				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
 				.form__error Ошибка формы
 				button.form__button.button Оформить товар
+
+mixin popup-audit()
+	#popup-audit.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='/img/svgSprite.svg#icon__cross')
+			.popup__title Заказать аудит
+			//-.popup__descr Если вам понравилась наша вакансия, вы подходите под эти критерии или у вас есть желание попробовать силы, откликнитесь на неё
+			form.form.popup__form(id='upload')
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Отправить
+
+mixin popup-diet()
+	#popup-diet.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='/img/svgSprite.svg#icon__cross')
+			.popup__title Заказать расчёт рациона
+			form.form.popup__form(id='upload')
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Отправить
+
+mixin popup-lab()
+	#popup-lab.popup.zoom-anim-dialog.mfp-hide
+		.popup__inner
+			.popup__close.mfp-close
+				svg.popup__icon.svg
+					use(xlink:href='/img/svgSprite.svg#icon__cross')
+			.popup__title Заказать анализ
+			form.form.popup__form(id='upload')
+				.form__grid
+					+field('Ваше имя:', 'Укажите ваше имя', '', 'Текст ошибки', 'form__field')
+					+field_phone('Номер телефона:', '+7', '', 'Текст ошибки', 'form__field')
+					+field_mail('Ваш email:', 'Укажите ваш email', '', 'Текст ошибки', 'form__field')
+					+field_textarea('Ваш комментарий:', 'Напишите что-нибудь', 'Текст ошибки', 'form__field')
+				+checkbox(true, true, 'Нажимая на кнопку «Отправить» Вы даёте согласие на обработку своих персональных данных в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»')
+				.form__error Ошибка формы
+				button.form__button.button Отправить
