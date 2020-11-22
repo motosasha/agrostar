@@ -21,4 +21,9 @@
 			width: 126px;
 		}
 	}
+	&__company {
+		color: #8a969b;
+		@include footer-company;
+		margin-top: 24px;
+	}
 }
