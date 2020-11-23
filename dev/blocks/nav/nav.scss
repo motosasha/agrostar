@@ -9,12 +9,13 @@
 	}
 	&_sidenav {
 		display: grid;
-		grid-gap: 24px;
+		grid-gap: 28px;
 	}
 	&__inner {
+		padding: 8px 0 0 16px;
 		@media (min-width: $screen-md) {
 			display: none;
-			padding-top: 8px;
+			padding: 8px 0 0;
 			.nav__item:hover & {
 				display: block;
 			}
@@ -22,7 +23,7 @@
 	}
 	&__drop {
 		display: grid;
-		grid-gap: 24px;
+		grid-gap: 8px;
 		@media (min-width: $screen-md) {
 			background: #fff;
 			box-shadow: 0 9px 21px rgba(0,0,0,.125);
@@ -46,11 +47,8 @@
 	&_sidenav &__item {
 		margin-left: 0;
 	}
-	& > &__item:first-of-type > &__link {
+	& > &__item > &__link:not(a) {
 		cursor: default;
-	}
-	&_sidenav > &__item:first-of-type > &__link {
-		display: none;
 	}
 	&__link {
 		align-items: center;
@@ -58,12 +56,22 @@
 		display: flex;
 		@include header-nav;
 		transition: opacity .25s ease;
-		white-space: nowrap;
 		&:hover {
 			opacity: .64;
 		}
+		@media (min-width: $screen-md) {
+			white-space: nowrap;
+		}
+	}
+	&_sidenav &__link {
+		display: block;
+		font-size: 20px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-align: center;
 	}
 	&__drop &__link {
+		font-size: 14px;
 		@media (min-width: $screen-md) {
 			color: #323441;
 		}
@@ -75,11 +83,14 @@
 		align-items: center;
 		border-radius: 2px;
 		cursor: pointer;
-		display: flex;
+		display: none;
 		justify-content: center;
 		height: 19px;
 		margin: 0 0 0 4px;
 		width: 16px;
+		@media (min-width: $screen-md) {
+			display: flex;
+		}
 	}
 	&__icon {
 		fill: #fff;
@@ -88,12 +99,5 @@
 		.page__header_mp & {
 			fill: #1e3d68;
 		}
-	}
-
-	@media (hover: none) and (pointer: coarse) {
-
-	}
-	@media (hover: hover) and (pointer: fine) {
-
 	}
 }

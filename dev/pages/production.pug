@@ -6,14 +6,7 @@ block pageHeader
 block pageMain
 	+subheader(
 		'Продукция',
-		true,
-		[
-			{active: false, link: 'О нас', url: '/about.html#about'},
-			{active: false, link: 'Консультационные услуги', url: '/about.html#services'},
-			{active: false, link: 'О производстве', url: '/about.html#prod'},
-			{active: false, link: 'О лаборатории', url: '/about.html#lab'},
-			{active: false, link: 'Вакансии', url: '/about.html#vacancy'}
-		]
+		false
 	)
 	section.section.section_pb
 		.grid
@@ -24,21 +17,21 @@ block pageMain
 							{
 								class: 'light',
 								title: 'Для повышения удоев',
-								isDescr: true,
+								isDescr: false,
 								descr: 'Для хорошей продуктивности в рационе надлежит добавлять минералы, микроэлементы, витамины',
 								img: 'milk',
 							},
 							{
 								class: 'middle',
-								title: 'Корма для здоровья коров',
-								isDescr: true,
+								title: 'Для здоровья коров',
+								isDescr: false,
 								descr: 'Характерной особенностью кормления молочных голштинских коров является высокая обеспеченность рационов концентрированными кормами',
 								img: 'cow',
 							},
 							{
 								class: 'dark',
-								title: 'Корма для выращивания телят',
-								isDescr: true,
+								title: 'Для выращивания телят',
+								isDescr: false,
 								descr: 'Залогом здоровья и продуктивности коров, роста прибыли и устойчивого развития бизнеса является сбалансированное кормление',
 								img: 'calf',
 							}
