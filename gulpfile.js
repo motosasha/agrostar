@@ -12,6 +12,7 @@ const debug                 = require('gulp-debug');
 const del                   = require('del');
 const fs                    = require('fs');
 const getClassesFromHtml    = require('get-classes-from-html');
+const ghPages               = require('gh-pages');
 const inlineSVG             = require('postcss-inline-svg');
 const mqpacker              = require("css-mqpacker");
 const objectFitImages       = require('postcss-object-fit-images');
@@ -345,6 +346,11 @@ function reload(done) {
 	browserSync.reload();
 	done();
 }
+
+function deploy(cb) {
+	ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 function serve() {
 	browserSync.init({

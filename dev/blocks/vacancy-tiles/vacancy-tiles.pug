@@ -6,7 +6,7 @@ mixin vacancy-tiles(items)
 			.vacancy-tiles__item
 				.vacancy-tiles__icon
 					svg.svg
-						use(xlink:href='/img/svgSprite.svg#icon__' + item.icon)
+						use(xlink:href='img/svgSprite.svg#icon__' + item.icon)
 				.vacancy-tiles__info
 					.vacancy-tiles__key!= item.key
 					.vacancy-tiles__value!= item.value
