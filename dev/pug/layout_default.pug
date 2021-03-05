@@ -1,4 +1,10 @@
 //- Стандартный шаблон страницы
+
+if deploy === true
+	- var pageAddress = '/agrostar';
+else
+	- var pageAddress = '/';
+
 block variables
 	- var isMainPage = false;
 include mixins.pug
