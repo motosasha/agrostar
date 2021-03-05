@@ -3,7 +3,7 @@
 mixin vacancy-list-tiles(items)
 	.vacancy-list-tiles
 		each item, index in items
-			a.vacancy-list-tiles__item(href='/vacancy.html')
+			a.vacancy-list-tiles__item(href= pageAddress + '/vacancy.html')
 				.vacancy-list-tiles__info
 					.vacancy-list-tiles__title Консультант-эксперт по крупному рогатому скоту (Волгоградская, Ярославская, Костромская, Ивановская области)
 					.vacancy-list-tiles__row

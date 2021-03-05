@@ -3,7 +3,7 @@
 mixin prod-grid(items)
 	.prod-grid
 		each item, index in items
-			a.prod-grid__item(href='/product.html')
+			a.prod-grid__item(href= pageAddress + '/product.html')
 				.prod-grid__img
 					img(src='img/product-good.jpg' alt='')
 				.prod-grid__title!= item.title

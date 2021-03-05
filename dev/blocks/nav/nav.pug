@@ -3,62 +3,62 @@
 mixin nav(isSide)
 	.nav(class= isSide ? 'nav_sidenav' : '')
 		.nav__item
-			a.nav__link(href='/about.html') О компании
+			a.nav__link(href= pageAddress + '/about.html') О компании
 				.nav__trigger
 					svg.nav__icon.svg
 						use(xlink:href='img/svgSprite.svg#icon__triangle')
 			.nav__inner
 				.nav__drop
 					.nav__item
-						a.nav__link(href='/about.html#about') О нас
+						a.nav__link(href= pageAddress + '/about.html#about') О нас
 					.nav__item
-						a.nav__link(href='/about.html#services') Услуги
+						a.nav__link(href= pageAddress + '/about.html#services') Услуги
 					.nav__item
-						a.nav__link(href='/about.html#prod') О производстве
+						a.nav__link(href= pageAddress + '/about.html#prod') О производстве
 					.nav__item
-						a.nav__link(href='/about.html#lab') О лаборатории
+						a.nav__link(href= pageAddress + '/about.html#lab') О лаборатории
 					.nav__item
-						a.nav__link(href='/about.html#vacancy') Вакансии
+						a.nav__link(href= pageAddress + '/about.html#vacancy') Вакансии
 		.nav__item
-			a.nav__link(href='/production.html') Продукция
+			a.nav__link(href= pageAddress + '/production.html') Продукция
 				.nav__trigger
 					svg.nav__icon.svg
 						use(xlink:href='img/svgSprite.svg#icon__triangle')
 			.nav__inner
 				.nav__drop
 					.nav__item
-						a.nav__link(href='/production-list.html') Для повышения удоев
+						a.nav__link(href= pageAddress + '/production-list.html') Для повышения удоев
 					.nav__item
-						a.nav__link(href='/production-list.html') Для здоровья коров
+						a.nav__link(href= pageAddress + '/production-list.html') Для здоровья коров
 					.nav__item
-						a.nav__link(href='/production-list.html') Для выращивания телят
+						a.nav__link(href= pageAddress + '/production-list.html') Для выращивания телят
 		.nav__item
-			a.nav__link(href='/services.html') Услуги
+			a.nav__link(href= pageAddress + '/services.html') Услуги
 				.nav__trigger
 					svg.nav__icon.svg
 						use(xlink:href='img/svgSprite.svg#icon__triangle')
 			.nav__inner
 				.nav__drop
 					.nav__item
-						a.nav__link(href='/audit.html') Аудит хозяйств
+						a.nav__link(href= pageAddress + '/audit.html') Аудит хозяйств
 					.nav__item
-						a.nav__link(href='/diet.html') Расчет рациона
+						a.nav__link(href= pageAddress + '/diet.html') Расчет рациона
 					.nav__item
-						a.nav__link(href='/lab.html') Лабораторные исследования
+						a.nav__link(href= pageAddress + '/lab.html') Лабораторные исследования
 		.nav__item
-			a.nav__link(href='/reviews.html') Отзывы
+			a.nav__link(href= pageAddress + '/reviews.html') Отзывы
 		.nav__item
-			a.nav__link(href='/contacts.html') Контакты
+			a.nav__link(href= pageAddress + '/contacts.html') Контакты
 
 mixin navSide
 	.nav.nav_sidenav
 		.nav__item
-			a.nav__link(href='/about.html') О компании
+			a.nav__link(href= pageAddress + '/about.html') О компании
 		.nav__item
-			a.nav__link(href='/production.html') Продукция
+			a.nav__link(href= pageAddress + '/production.html') Продукция
 		.nav__item
-			a.nav__link(href='/services.html') Услуги
+			a.nav__link(href= pageAddress + '/services.html') Услуги
 		.nav__item
-			a.nav__link(href='/reviews.html') Отзывы
+			a.nav__link(href= pageAddress + '/reviews.html') Отзывы
 		.nav__item
-			a.nav__link(href='/contacts.html') Контакты
+			a.nav__link(href= pageAddress + '/contacts.html') Контакты
