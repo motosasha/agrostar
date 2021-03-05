@@ -32,6 +32,7 @@ const uglify            	= require('gulp-uglify-es').default;
 const webpackStream         = require('webpack-stream');
 
 // Глобальные настройки
+const ghPgs = process.env.ghPgs || false;
 const idm = {};
 idm.config = require('./config.js');
 idm.blocksFromHtml = Object.create(idm.config.alwaysAddBlocks); // блоки из конфига сразу добавим в список блоков
@@ -348,6 +349,7 @@ function reload(done) {
 }
 
 function deploy(cb) {
+	let pageAddress = '/agrostar';
 	ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
 exports.deploy = deploy;

@@ -11,7 +11,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "deploy": "cross-env ghPgs=true gulp deploy"
   },
   "browserslist": [
     "> 1%",
@@ -24,6 +24,7 @@
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "cpy": "^8.0.0",
+    "cross-env": "^7.0.3",
     "css-mqpacker": "^7.0.0",
     "current-device": "^0.10.0",
     "del": "^5.1.0",
