@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (reviews)
+
+mixin reviews(items)
+	.reviews
+		each item in items
+			.reviews__item
+				.reviews__left
+					a.reviews__link.popup-img(href='img/img__license_l.jpg')
+						img.reviews__img(src='img/img__license.jpg')
+
+				.reviews__right
+					.reviews__title!= item.title
+					.reviews__list
+						.reviews__litem
+							.reviews__subtitle Начало работы
+							.reviews__desc!= item.time
+						.reviews__litem
+							.reviews__subtitle Задача
+							.reviews__desc!= item.task
+					a.reviews__button.button.popup-video(href='http://www.youtube.com/watch?v=0O2aH4XLbto') Смотреть видеоотзыв

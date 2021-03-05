@@ -23,8 +23,10 @@
 			box-shadow: 0 0 16px rgba(0,0,0,.25);
 		}
 	}
-	.mfp-bg.mfp-fade.mfp-ready ~ & &__header {
-		padding-right: 17px;
+	@media (min-width: $screen-md) {
+		.mfp-bg.mfp-fade.mfp-ready ~ & &__header {
+			padding-right: 17px;
+		}
 	}
 	&__main {
 		flex: 1 0 auto;
@@ -71,6 +73,11 @@
 		color: #1a171a;
 		@include page-title;
 		margin: 0 0 20px;
+		&_tac {
+			@media (min-width: $screen-md) {
+				text-align: center;
+			}
+		}
 	}
 	&__p {
 		color: rgba(26, 23, 26, 0.7);

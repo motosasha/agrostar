@@ -320,6 +320,18 @@ function copyFonts(cb) {
 }
 exports.copyFonts = copyFonts;
 
+function copyVideo(cb) {
+	let imgPath = `${dir.dev}video/`;
+	if(fileExist(imgPath)) {
+		return src(imgPath + '**/*.*')
+			.pipe(dest(`${dir.build}video/`))
+	}
+	else {
+		cb();
+	}
+}
+exports.copyVideo = copyVideo;
+
 
 
 function clearBuildDir() {
@@ -451,7 +463,7 @@ function serve() {
 exports.build = series(
 	parallel(clearBuildDir, writePugMixinsFile),
 	parallel(compilePugFast, copyAssets, generateSvgSprite),
-	parallel(copyAdditions, copyFonts, copyImg, copySvg),
+	parallel(copyAdditions, copyFonts, copyImg, copySvg, copyVideo),
 	parallel(writeSassImportsFile),
 	parallel(compileSass, compileTrash, buildJs)
 );
@@ -459,7 +471,7 @@ exports.build = series(
 exports.default = series(
 	parallel(clearBuildDir, writePugMixinsFile),
 	parallel(compilePugFast, copyAssets, generateSvgSprite),
-	parallel(copyAdditions, copyFonts, copyImg, copySvg),
+	parallel(copyAdditions, copyFonts, copyImg, copySvg, copyVideo),
 	parallel(writeSassImportsFile),
 	parallel(compileSass, compileTrash, buildJs),
 	serve,

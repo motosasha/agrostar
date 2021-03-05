@@ -50,6 +50,27 @@ block pageMain
 								.slider__bubble
 									.slider__bubble-title Заголовок 2
 									.slider__bubble-descr Описание 2
+	section.section.section_video
+		.grid
+			.grid__row
+				.grid__col
+					.services
+						h2.page__title.page__title_1.page__title_tac Передовые технологии в области кормления
+						.video
+							video(width='400' height='300' controls='controls' poster='img/img__video-cover.jpg')
+								source(src='video/video.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+								| Тег video не поддерживается вашим браузером.
+								a(href='video/video.mp4') Скачайте видео
+								| .
+	section.section.section_video
+		.grid
+			.grid__row
+				.grid__col
+					.services
+						h2.page__title.page__title_1.page__title_tac Передовые технологии в области кормления
+						.video
+							iframe(src='https://www.youtube.com/embed/9WkDZ95XToM' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
 	section.section
 		.section__anchor#services
 		.grid

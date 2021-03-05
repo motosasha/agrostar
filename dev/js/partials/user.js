@@ -181,4 +181,26 @@ $(document).ready(function() {
 		}
 		init();
 	})();
+
+	$('.popup-img').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom',
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300
+		}
+	});
+
+	$('.popup-video').magnificPopup({
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
 });

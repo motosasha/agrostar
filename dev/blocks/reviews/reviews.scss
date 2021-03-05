@@ -1,0 +1,105 @@
+// В этом файле должны быть стили для БЭМ-блока reviews, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		& + & {
+			margin-top: 64px;
+		}
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+		}
+	}
+	&__left {
+		@media (min-width: $screen-xl) {
+			flex: 0 0 auto;
+			width: 296px;
+		}
+	}
+	&__right {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		padding-top: 24px;
+		@media (min-width: $screen-md) {
+			margin-left: 32px;
+		}
+		@media (min-width: $screen-xl) {
+			margin-left: 60px;
+		}
+	}
+
+	&__link {
+		background: #fff;
+		border-radius: 24px;
+		box-shadow: 0 9px 21px #dfe9eb;
+		display: block;
+		overflow: hidden;
+		position: relative;
+		width: 200px;
+		&::before {
+			background: url("../img/icon__zoom.png") center no-repeat, rgba(30,61,104,0);
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			transition: background .25s ease;
+			width: 100%;
+		}
+		&:hover::before {
+			background: url("../img/icon__zoom.png") center no-repeat, rgba(30,61,104,.05);
+		}
+		@media (min-width: $screen-xl) {
+			width: auto;
+		}
+	}
+	&__img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+	&__title {
+		color: #1a171a;
+		font-family: $font-family-heading;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 120%;
+		@media (min-width: $screen-md) {
+			font-size: 32px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 48px;
+		}
+	}
+	&__list {
+		margin: 24px 0;
+		@media (min-width: $screen-xl) {
+			margin: 32px 0;
+		}
+	}
+	&__litem {
+		display: flex;
+		flex-direction: column;
+		& + & {
+			margin-top: 16px;
+			@media (min-width: $screen-xl) {
+				margin-top: 24px;
+			}
+		}
+	}
+	&__subtitle {
+		color: rgba(26, 23, 26, 0.4);
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 4px;
+	}
+	&__desc {
+		color: #1a171a;
+		font-size: 16px;
+		line-height: 150%;
+	}
+	&__button {}
+}
