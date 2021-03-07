@@ -4,7 +4,7 @@
 
 .select {
 	appearance: none;
-	background: url(../img/svgSprite.svg#icon__select-view) no-repeat right 12px top 12px, #fff;
+	background: url(/img/svgSprite.svg#icon__select-view) no-repeat right 12px top 12px, #fff;
 	background-size: 22px 22px;
 	border: 1px solid transparent;
 	border-radius: 8px;
@@ -16,7 +16,7 @@
 				border .125s ease-in-out;
 	width: 100%;
 	@media (min-width: $screen-lg) {
-		background: url(../img/svgSprite.svg#icon__select-view) no-repeat right 21px top 21px, #fff;
+		background: url(/img/svgSprite.svg#icon__select-view) no-repeat right 21px top 21px, #fff;
 		background-size: 22px 22px;
 		padding: 21px 24px;
 	}
