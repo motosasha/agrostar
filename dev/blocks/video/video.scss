@@ -3,43 +3,49 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .video {
-	border-radius: 16px;
-	box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
-	height: 0;
-	margin: 24px auto 0;
-	overflow: hidden;
-	outline: none;
-	padding-top: 56.25%;
-	position: relative;
-	width: 100%;
-	@media (min-width: $screen-sm) {
-		height: 302px;
-		padding: 0;
-		width: 536px;
-	}
+	padding: 48px 0 0;
 	@media (min-width: $screen-md) {
-		height: 387px;
-		margin: 56px auto 0;
-		width: 688px;
+		padding: 92px 0 0;
 	}
-	@media (min-width: $screen-lg) {
-		border-radius: 24px;
-		height: 522px;
-		width: 928px;
-	}
-	@media (min-width: $screen-xl) {
-		height: 576px;
-		width: 1024px;
-	}
-	iframe,
-	video {
-		height: 100%;
-		left: 0;
-		margin: 0;
+	&__inner {
+		border-radius: 16px;
+		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		height: 0;
+		margin: 24px auto 0;
+		overflow: hidden;
 		outline: none;
-		padding: 0;
-		position: absolute;
-		top: 0;
+		padding-top: 56.25%;
+		position: relative;
 		width: 100%;
+		@media (min-width: $screen-sm) {
+			height: 302px;
+			padding: 0;
+			width: 536px;
+		}
+		@media (min-width: $screen-md) {
+			height: 387px;
+			margin: 56px auto 0;
+			width: 688px;
+		}
+		@media (min-width: $screen-lg) {
+			border-radius: 24px;
+			height: 522px;
+			width: 928px;
+		}
+		@media (min-width: $screen-xl) {
+			height: 576px;
+			width: 1024px;
+		}
+		iframe,
+		video {
+			height: 100%;
+			left: 0;
+			margin: 0;
+			outline: none;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
 	}
 }
