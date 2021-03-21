@@ -33,7 +33,12 @@ block pageMain
 									.prod__list-value Пластиковое ведро 7,5 кг с дозировочной ложкой
 									.prod__list-key Срок годности:
 									.prod__list-value 24 месяца
-								a.prod__button.button.js-popup(href='#popup-price') Узнать цену
+								.prod__buttons
+									a.prod__button.button.js-popup(href='#popup-price') Узнать цену
+									a.prod__video.popup-video(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+										svg.prod__video-icon.svg
+											use(xlink:href='/img/svgSprite.svg#icon__video')
+										.prod__video-title Смотреть видео
 								.prod__file
 									.prod__file-icon
 										svg.svg

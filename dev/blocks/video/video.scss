@@ -7,6 +7,15 @@
 	@media (min-width: $screen-md) {
 		padding: 92px 0 0;
 	}
+	&_article {
+		margin: 24px 0;
+		max-width: 1024px;
+		padding: 0;
+		@media (min-width: $screen-md) {
+			margin: 56px 0;
+			padding: 0;
+		}
+	}
 	&__inner {
 		border-radius: 16px;
 		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);

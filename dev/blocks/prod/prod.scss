@@ -58,9 +58,46 @@
 		@include prod-list;
 		margin: 6px 0 18px;
 	}
-	&__button {
+	&__buttons {
+		display: grid;
+		grid-gap: 16px;
 		margin-top: 20px;
+		@media (min-width: $screen-sm) {
+			grid-gap: 24px;
+			grid-template-columns: 206px 224px;
+		}
+	}
+	&__button {
 		width: 206px;
+	}
+	&__video {
+		align-items: center;
+		background: #fff;
+		box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.14);
+		border-radius: 54px;
+		display: flex;
+		padding: 16px 24px;
+		position: relative;
+		transition: all .25s ease;
+		width: 224px;
+		z-index: 2;
+		&:hover {
+			box-shadow: 26px 14px 42px rgba(83, 107, 129, 0.35);
+			transform: translateY(-2px);
+		}
+	}
+	&__video-icon {
+		fill: #1e3d68;
+		flex: 0 0 auto;
+		height: 32px;
+		margin: -6px 16px -6px 0;
+		width: 32px;
+	}
+	&__video-title {
+		color: #1a171a;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 100%;
 	}
 
 	&__file {
