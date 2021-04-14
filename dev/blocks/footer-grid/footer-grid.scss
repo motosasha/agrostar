@@ -11,6 +11,7 @@
 		grid-template-areas:
 				'logo logo'
 				'about catalog'
+				'about reviews-video'
 				'services contacts';
 	}
 	@media (min-width: $screen-md) {
@@ -18,19 +19,22 @@
 		grid-template-areas:
 				'logo logo logo'
 				'about catalog contacts'
-				'about services contacts';
+				'about services contacts'
+				'reviews-video services contacts';
 	}
 	@media (min-width: $screen-lg) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-areas:
 				'logo about catalog contacts'
-				'logo about services contacts';
+				'logo about services contacts'
+				'logo reviews-video services contacts';
 	}
 	@media (min-width: $screen-xl) {
-		grid-gap: 60px;
+		grid-gap: 32px 60px;
 		grid-template-columns: 192px 180px 240px 180px 208px;
 		grid-template-areas:
-				'logo about catalog services contacts';
+				'logo about catalog services contacts'
+				'logo about reviews-video services contacts';
 	}
 	&__item {
 		@media (min-width: $screen-sm) {
@@ -47,6 +51,9 @@
 				grid-area: services;
 			}
 			&:nth-child(5) {
+				grid-area: reviews-video;
+			}
+			&:nth-child(6) {
 				grid-area: contacts;
 			}
 		}

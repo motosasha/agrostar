@@ -21,11 +21,10 @@
 		overflow-y: auto;
 	}
 	&__inner {
-		align-items: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 80%;
+		height: 90%;
 		margin-top: auto;
 		min-height: 360px;
 	}

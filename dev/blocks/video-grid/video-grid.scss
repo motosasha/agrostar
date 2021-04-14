@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока video-grid, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.video-grid {
+	display: grid;
+	grid-gap: 32px;
+	@media (min-width: $screen-md) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (min-width: $screen-xl) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&__item {}
+}

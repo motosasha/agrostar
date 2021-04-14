@@ -7,10 +7,21 @@
 	@media (min-width: $screen-sm) {
 		padding: 0;
 	}
+	& + & {
+		margin-top: 24px;
+	}
 	&__title {
 		color: #1c1c1a;
 		@include footer-title;
 		margin-bottom: 18px;
+		transition: opacity .25s ease;
 		user-select: none;
+		&[href] {
+			text-decoration: underline;
+		}
+		&[href]:hover {
+			opacity: .75;
+			text-decoration: none;
+		}
 	}
 }

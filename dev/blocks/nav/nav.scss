@@ -10,6 +10,7 @@
 	&_sidenav {
 		display: grid;
 		grid-gap: 28px;
+		margin-left: 34px;
 	}
 	&__inner {
 		padding: 8px 0 0 16px;
@@ -38,7 +39,7 @@
 	&__item {
 		position: relative;
 		& + & {
-			margin-left: 26px;
+			margin-left: 24px;
 		}
 	}
 	&__inner &__item + &__item {
@@ -65,10 +66,9 @@
 	}
 	&_sidenav &__link {
 		display: block;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 300;
 		letter-spacing: 1px;
-		text-align: center;
 	}
 	&__drop &__link {
 		font-size: 14px;
