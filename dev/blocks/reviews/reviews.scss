@@ -14,6 +14,7 @@
 		}
 	}
 	&__left {
+		width: 200px;
 		@media (min-width: $screen-xl) {
 			flex: 0 0 auto;
 			width: 296px;
@@ -34,14 +35,15 @@
 
 	&__link {
 		background: #fff;
+		border: 4px solid white;
 		border-radius: 24px;
-		box-shadow: 0 9px 21px #dfe9eb;
 		display: block;
 		overflow: hidden;
 		position: relative;
 		width: 200px;
 		&::before {
-			background: url("/img/icon__zoom.png") center no-repeat, rgba(30,61,104,0);
+			background: url("/img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,0);
+			border-radius: 22px;
 			content: '';
 			display: block;
 			height: 100%;
@@ -50,7 +52,7 @@
 			width: 100%;
 		}
 		&:hover::before {
-			background: url("/img/icon__zoom.png") center no-repeat, rgba(30,61,104,.05);
+			background: url("/img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,.05);
 		}
 		@media (min-width: $screen-xl) {
 			width: auto;
@@ -102,4 +104,50 @@
 		line-height: 150%;
 	}
 	&__button {}
+
+	&__slider {
+		box-shadow: 0 9px 21px #dfe9eb;
+		border-radius: 24px;
+		overflow: hidden;
+	}
+
+	.slick-arrow {
+		align-items: center;
+		background: #1e3d68;
+		border-radius: 24px;
+		bottom: 16px;
+		display: flex;
+		justify-content: center;
+		height: 40px;
+		transform: none;
+		transition: all .25s ease;
+		width: 40px;
+		z-index: 2;
+		svg {
+			display: block;
+			fill: #fff;
+			height: 16px;
+			width: 16px;
+		}
+		&::before {
+			content: none;
+		}
+		&:hover {
+			background: #112743;
+		}
+	}
+	.slick-prev {
+		left: 50%;
+		top: auto;
+		transform: translateX(-44px);
+	}
+	.slick-next {
+		left: 50%;
+		top: auto;
+		transform: translateX(4px);
+	}
+	.slick-disabled {
+		cursor: default;
+		opacity: .5;
+	}
 }

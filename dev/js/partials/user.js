@@ -182,25 +182,42 @@ $(document).ready(function() {
 		init();
 	})();
 
-	$('.popup-img').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300
-		}
-	});
-
 	$('.popup-video').magnificPopup({
 		type: 'iframe',
 		mainClass: 'mfp-fade',
 		removalDelay: 160,
 		preloader: false,
 		fixedContentPos: false
+	});
+
+	$('.reviews__slider').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+	});
+
+	$('.reviews__slider').each(function() {
+		$(this).magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			fixedContentPos: true,
+			mainClass: 'mfp-no-margins mfp-with-zoom',
+			image: {
+				verticalFit: true
+			},
+			zoom: {
+				enabled: true,
+				duration: 300
+			},
+			delegate: 'a',
+			gallery: {
+				enabled: true,
+				arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+				tPrev: 'Previous (Left arrow key)',
+				tNext: 'Next (Right arrow key)'
+			}
+		});
 	});
 });

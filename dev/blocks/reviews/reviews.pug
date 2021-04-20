@@ -5,9 +5,11 @@ mixin reviews(items)
 		each item in items
 			.reviews__item
 				.reviews__left
-					a.reviews__link.popup-img(href='img/img__license_l.jpg')
-						img.reviews__img(src='img/img__license.jpg')
-
+					.reviews__slider
+						each slide in item.slide
+							.reviews__slide
+								a.reviews__link(href='img/' + slide.imgLarge + '.jpg')
+									img.reviews__img(src='img/' + slide.img + '.jpg')
 				.reviews__right
 					.reviews__title!= item.title
 					.reviews__list
