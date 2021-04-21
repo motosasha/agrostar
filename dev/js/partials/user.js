@@ -194,8 +194,8 @@ $(document).ready(function() {
 		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
+		nextArrow: '<button type="button" class="slick-next"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_right"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="svg"><use xlink:href="/img/svgSprite.svg#icon__arrow_left"></use></svg></button>'
 	});
 
 	$('.reviews__slider').each(function() {

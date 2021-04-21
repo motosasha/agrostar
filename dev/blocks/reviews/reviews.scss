@@ -42,7 +42,7 @@
 		position: relative;
 		width: 200px;
 		&::before {
-			background: url("../img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,0);
+			background: url("/img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,0);
 			border-radius: 22px;
 			content: '';
 			display: block;
@@ -52,7 +52,7 @@
 			width: 100%;
 		}
 		&:hover::before {
-			background: url("../img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,.05);
+			background: url("/img/icon__zoom.png") top 8px right 8px no-repeat, linear-gradient(45deg, rgba(255,255,255,0) 75%, rgba(255,255,255,1)), rgba(30,61,104,.05);
 		}
 		@media (min-width: $screen-xl) {
 			width: auto;
