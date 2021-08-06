@@ -20,28 +20,75 @@ block pageMain
 		.grid
 			.grid__row
 				.grid__col
-					+prod-tiles(
-						[
-							{
-								class: 'light',
-								title: 'Для повышения удоев',
-								isDescr: false,
-								img: 'milk',
-							},
-							{
-								class: 'middle',
-								title: 'Корма для здоровья коров',
-								isDescr: false,
-								img: 'cow',
-							},
-							{
-								class: 'dark',
-								title: 'Корма для выращивания телят',
-								isDescr: false,
-								img: 'calf',
-							},
-						]
-					)
+					.prod-slider
+						.prod-slider__slide
+							+prod-tiles(
+								[
+									{
+										class: 'light',
+										title: 'Для повышения удоев',
+										isDescr: false,
+										img: 'milk',
+									}
+								]
+							)
+
+						.prod-slider__slide
+							+prod-tiles(
+								[
+									{
+										class: 'middle',
+										title: 'Корма для здоровья коров',
+										isDescr: false,
+										img: 'cow',
+									}
+								]
+							)
+						.prod-slider__slide
+							+prod-tiles(
+								[
+									{
+										class: 'dark',
+										title: 'Корма для выращивания телят',
+										isDescr: false,
+										img: 'calf',
+									}
+								]
+							)
+						.prod-slider__slide
+							+prod-tiles(
+								[
+									{
+										class: 'light',
+										title: 'Консервант',
+										isDescr: false,
+										img: 'rye',
+									}
+								]
+							)
+					//-
+						+prod-tiles(
+							[
+								{
+									class: 'light',
+									title: 'Для повышения удоев',
+									isDescr: false,
+									img: 'milk',
+								},
+								{
+									class: 'middle',
+									title: 'Корма для здоровья коров',
+									isDescr: false,
+									img: 'cow',
+								},
+								{
+									class: 'dark',
+									title: 'Корма для выращивания телят',
+									isDescr: false,
+									img: 'calf',
+								},
+							]
+						)
 	section.section
 		.grid
 			.grid__row

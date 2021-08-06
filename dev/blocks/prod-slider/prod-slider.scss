@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока prod-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.prod-slider {
+	margin: 0 -8px;
+	.slick-track {
+		display: flex !important;
+	}
+	.slick-slide {
+		height: auto;
+		> * {
+			height: 100%;
+		}
+	}
+	&__slide {
+		height: 100%;
+		padding: 8px;
+		> div {
+			height: 100%;
+		}
+	}
+
+	.slick-arrow {
+		align-items: center;
+		background: #fff;
+		bottom: -32px;
+		border-radius: 16%;
+		display: flex;
+		justify-content: center;
+		height: 32px;
+		transform: none;
+		transition: all .25s ease;
+		width: 32px;
+		z-index: 2;
+		@media (min-width: $screen-md) {
+			bottom: -56px;
+			height: 56px;
+			width: 56px;
+		}
+		svg {
+			display: block;
+			fill: #1e3d68;
+			height: 16px;
+			width: 16px;
+			@media (min-width: $screen-md) {
+				height: 24px;
+				width: 24px;
+			}
+		}
+		&::before {
+			content: none;
+		}
+		&:hover {
+			background: #1e3d68;
+			svg {
+				fill: #fff;
+			}
+		}
+	}
+	.slick-prev {
+		left: auto;
+		right: 40px;
+		top: auto;
+		@media (min-width: $screen-md) {
+			right: 64px;
+		}
+	}
+	.slick-next {
+		left: auto;
+		right: 0;
+		top: auto;
+		@media (min-width: $screen-md) {
+			right: 0;
+		}
+	}
+}

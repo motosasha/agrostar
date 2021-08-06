@@ -6,7 +6,11 @@
 	display: grid;
 	grid-gap: 16px;
 	@media (min-width: $screen-lg) {
+		grid-gap: 24px 16px;
 		grid-template-columns: 1fr 1fr 1fr;
+		.prod-slider & {
+			grid-template-columns: 1fr;
+		}
 	}
 	&__item {
 		border-radius: 20px;
@@ -117,6 +121,11 @@
 		transform: translate(60px, 60px);
 		width: 185px;
 		@media (min-width: $screen-sm) {
+			height: 240px;
+			transform: translate(150px, 80px);
+			width: 370px;
+		}
+		@media (min-width: $screen-lg) {
 			height: 300px;
 			transform: translate(130px, 50px);
 			width: 370px;
